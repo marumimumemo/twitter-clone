@@ -23,7 +23,7 @@
 - has_many :likes
 - has_many :retweets
 - has_many :votes
-- has_many :notification
+- has_many :notifications
 - has_many :moments
 - has_many :lists, through: :list_users
 - has_many :list_users
@@ -46,7 +46,7 @@
 - has_many :retweets
 - has_many :tags, through: :tweet_tags
 - has_many :tweet_tags
-- has_many :notification
+- has_many :notifications
 - has_many :moments
 
 
@@ -81,7 +81,7 @@
 - has_many :retweets
 - has_many :tags, through: :comment_tags
 - has_many :comment_tags
-- has_many :notification
+- has_many :notifications
 
 ## relationships table
 |Column|Type|Options|
