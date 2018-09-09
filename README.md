@@ -83,7 +83,7 @@
 - has_many :comment_tags
 - has_many :notification
 
-## relationship table
+## relationships table
 |Column|Type|Options|
 |------|----|-------|
 |follower_id|integer|index:true, null: false, foreign_key: true|
