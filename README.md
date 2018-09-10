@@ -30,6 +30,7 @@
 - has_many :messages
 - has_many :chatrooms, through: :chatroom_users
 - has_many :chatroom_users
+- has_one :space
 
 ## tweets table
 |Column|Type|Options|
@@ -37,18 +38,18 @@
 |body|text|null: false|
 |user_id|reference|index:true, null: false, foreign_key: true|
 
-
 ### Association
 - belongs_to :user
 - has_many :images
 - has_many :comments
 - has_many :likes
 - has_many :retweets
+- has_one :vote
 - has_many :tags, through: :tweet_tags
 - has_many :tweet_tags
 - has_many :notifications
 - has_many :moments
-
+- has_one :space
 
 ## images table
 |Column|Type|Options|
@@ -67,7 +68,6 @@
 - belongs_to :moment
 - belongs_to :message
 
-
 ## comments table
 |Column|Type|Options|
 |------|----|-------|
@@ -81,6 +81,7 @@
 - has_many :images
 - has_many :likes
 - has_many :retweets
+- has_one :vote
 - has_many :tags, through: :comment_tags
 - has_many :comment_tags
 - has_many :notifications
@@ -93,6 +94,7 @@
 
 ### Association
 - belongs_to :user
+- has_many :notifications
 
 ## likes table
 |Column|Type|Options|
@@ -105,6 +107,7 @@
 - belongs_to :user
 - belongs_to :tweet
 - belongs_to :comment
+- has_many :notifications
 
 ## retweets table
 |Column|Type|Options|
@@ -117,6 +120,7 @@
 - belongs_to :user
 - belongs_to :tweet
 - belongs_to :comment
+- has_many :notifications
 
 ## votes table
 |Column|Type|Options|
@@ -125,11 +129,13 @@
 |voting_period|string|null: false|
 |answer|text|null: false|
 |user_id|reference|null: false, foreign_key: true|
-|tweet_id|reference|null: false, foreign_key: true|
+|tweet_id|reference|foreign_key: true|
+|comment_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :tweet
+- belongs_to :comment
 
 ## tags table
 |Column|Type|Options|
@@ -169,12 +175,16 @@
 |notified_type|string|null: false|
 |user_id|reference|null: false, foreign_key: true|
 |tweet_id|reference|foreign_key: true|
+|like_id|reference|foreign_key: true|
+|retweet_id|reference|foreign_key: true|
 |comment_id|reference|foreign_key: true|
 |relationship_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :tweet
+- belongs_to :like
+- belongs_to :retweet
 - belongs_to :comment
 - belongs_to :relationship
 
@@ -186,7 +196,6 @@
 |body |text|null: false|
 |user_id|reference|index: true, null: false, foreign_key: true|
 |tweet_id|reference|null: false, foreign_key: true|
-|image_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -245,12 +254,11 @@
 |body  |text|null: false|
 |user_id|reference|null: false, foreign_key: true|
 |chatroom_id|reference|null: false, foreign_key: true|
-|image_id|reference|foreign_key: true|
-
 
 ### Association
 - belongs_to :user
 - belongs_to :chatroom
+- has_one :image
 
 ## spaces table
 
@@ -263,5 +271,3 @@
 ### Association
 - belongs_to :user
 - belongs_to :tweet
-
--------
