@@ -64,6 +64,8 @@
 - belongs_to :user
 - belongs_to :tweet
 - belongs_to :comment
+- belongs_to :moment
+- belongs_to :message
 
 
 ## comments table
@@ -127,6 +129,7 @@
 
 ### Association
 - belongs_to :user
+- belongs_to :tweet
 
 ## tags table
 |Column|Type|Options|
@@ -173,6 +176,7 @@
 - belongs_to :user
 - belongs_to :tweet
 - belongs_to :comment
+- belongs_to :relationship
 
 ## moments table
 
@@ -187,6 +191,7 @@
 ### Association
 - belongs_to :user
 - belongs_to :tweet
+- has_many :images
 
 ## lists table
 
@@ -253,6 +258,10 @@
 |------|----|-------|
 |address|string|index: true, null: false|
 |user_id|reference|index: true, null: false, foreign_key: true|
+|tweet_id|reference|null: false, foreign_key: true|
 
 ### Association
+- belongs_to :user
+- belongs_to :tweet
+
 -------
