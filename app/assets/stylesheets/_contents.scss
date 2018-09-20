@@ -1,0 +1,442 @@
+.contents {
+  height: 100vh;
+  weight: 100vh;
+  padding: 56px 14px 15px;
+  margin: 0 auto;
+  background: #e6ecf0;
+  &__leftbar {
+    width: 290px;
+    padding-left: 20px;
+    float: left;
+    &__profile {
+      height: 215px;
+      width: 288px;
+      border: 1px solid #e6ecf0;
+      background: $white;
+      position: relative;
+      margin-bottom: 10px;
+      .profile-bg {
+        height: 95px;
+        background-size: 100%;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        background-position: 0 50%;
+      }
+      .profile-icon-link {
+        height: 79px;
+        width: 74px;
+        background-color: $white;
+        border-radius: 50%;
+        margin: -30px 0 0 8px;
+        padding: 1px;
+        .icon {
+          height: 72px;
+          width: 72px;
+          color: $white;
+          border-radius: 50%;
+          border: 2px solid $white;
+          box-sizing: border-box;
+        }
+      }
+      .user-field {
+        height: 43px;
+        width: 185px;
+        position: absolute;
+        top: 103px;
+        left: 90px;
+        font-weight: bold;
+        .name {
+          font-size: 18px;
+          line-height: 25px;
+          margin: -1px 0 -2px 0;
+        }
+        .user-name {
+          color: #66757f;
+          max-width: 100%;
+          font-size: 12px;
+          padding-right: 5px;
+        }
+      }
+      .tweets {
+        height: 37px;
+        width: 75px;
+        float: left;
+        font-weight: bold;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-bottom: 16px;
+        .tweets-label {
+          height: 16px;
+          width: 75px;
+          color: $gray;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        .tweets-count {
+          height: 21px;
+          width: 75px;
+          color: $light_blue;
+          font-size: 16px;
+          padding-top: 3px;
+        }
+      }
+      .following {
+        height: 37px;
+        width: 75px;
+        float: left;
+        font-weight: bold;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-bottom: 16px;
+        .following-label {
+          height: 16px;
+          width: 75px;
+          color: $gray;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        .following-count {
+          height: 21px;
+          width: 75px;
+          color: $light_blue;
+          font-size: 16px;
+          padding-top: 3px;
+        }
+      }
+      .followed {
+        height: 37px;
+        width: 75px;
+        float: left;
+        font-weight: bold;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-bottom: 16px;
+        .followed-label {
+          height: 16px;
+          width: 75px;
+          color: $gray;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        .followed-count {
+          height: 21px;
+          width: 75px;
+          color: $light_blue;
+          font-size: 16px;
+          padding-top: 3px;
+        }
+      }
+    }
+    &__recommend-trend {
+      height: 400px;
+      width: 258px;
+      background-color: $white;
+      border: 1px solid #e6ecf0;
+      line-height: inherit;
+      padding: 15px;
+      .header {
+        height: 23px;
+        width: 144px;
+        float: left;
+        line-height: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .change-trends {
+        font-size: 12px;
+        color: $light_blue;
+        float: left;
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+      .trend-item {
+        clear: both;
+        padding-bottom: 10px;
+        .title {
+          font-size: 14px;
+          font-weight: bold;
+          color: $light_blue;
+        }
+        .count {
+          color: $gray;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__timeline {
+    height: 100vh;
+    width: 590px;
+    float: left;
+    margin-top: 1px;
+    margin-left: 10px;
+    background: $white;
+    &__tweetbox {
+      height: 58px;
+      width: 590px;
+      background-color: #E8F5FD;
+      .icon {
+        height: 32px;
+        width: 32px;
+        float: left;
+        padding-left: 24px;
+        padding-top: 10px;
+        border-radius: 50%;
+        margin-top: 3px;
+      }
+      .tweet-editer {
+        height: 36px;
+        width: 506px;
+        color: $light_blue;
+        float: left;
+        padding-right: 31px;
+        padding: 11px;
+        font-size: 20px;
+        .box {
+          width: 100%;
+          border: 1px solid #e6ecf0;
+          border-radius: 5px;
+        }
+        .text {
+          position: absolute;
+          top: 75px;
+          padding-left: 10px;
+          font-size: 14px;
+        }
+        .fa-image {
+          float: right;
+          position: absolute;
+          top: 76px;
+          left: 880px;
+          font-size: 15px;
+        }
+        #filesend {
+          display: none;
+        }
+      }
+    }
+    &__new-tweets-bar {
+      height: 22px;
+      width: 588px;
+      background-color: #f5f8fa;
+      color: $light_blue;
+      font-size: 14px;
+      border-bottom: 1px solid #e6ecf0;
+      border-top: 1px solid #e6ecf0;
+      cursor: pointer;
+      padding: 10px 1px;
+      text-align: center;
+    }
+    &__tweet {
+      min-height: 100px;
+      border-bottom: 1px solid #e6ecf0;
+      cursor: pointer;
+      position: relative;
+      padding: 9px 12px;
+      .context-bar {
+        height: 22px;
+        width: 530px;
+        margin-left: 30px;
+        .fa-heart {
+          float: left;
+          color: $gray;
+          font-size: 12px;
+          margin-top: 2px;
+          margin-right: 5px;
+        }
+        .notification {
+          float: left;
+          color: $gray;
+          font-size: 11px;
+          margin-right: 5px;
+        }
+      }
+      .icon {
+        height: 48px;
+        width: 48px;
+        float: left;
+        margin-top: 3px;
+        position: absolute;
+        border-radius: 50%;
+      }
+      .header {
+        height: 18px;
+        width: 506px;
+        float: right;
+        .fullname {
+          height: 18px;
+          max-width: 100%;
+          float: left;
+          color: #14171a;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .username {
+          float: left;
+          color: $gray;
+          font-size: 14px;
+          max-width: 100%;
+        }
+        .timestamp {
+          float: left;
+          color: $gray;
+          font-size: 14px;
+        }
+        .fa-angle-down {
+          float: right;
+          color: $gray;
+          font-size: 17px;
+        }
+      }
+      .tweet-text {
+        float: right;
+        width: 506px;
+        min-height: 35px;
+        font-size: 14px;
+      }
+      .item-fotter {
+        height: 31px;
+        width: 506px;
+        font-size: 12px;
+        padding-top: 1px;
+        padding-left: 60px;
+        position: absolute;
+        bottom: 0;
+        .fa-comment {
+          float: left;
+          color: $gray;
+          font-size: 14px;
+        }
+        @include count();
+        .fa-retweet {
+          float: left;
+          color: $gray;
+          font-size: 14px;
+          padding-left: 48px;
+        }
+        @include count();
+        .fa-heart {
+          float: left;
+          color: $gray;
+          font-size: 13px;
+          padding-top: 1px;
+          padding-left: 48px;
+        }
+        @include count();
+        .fa-envelope {
+          float: left;
+          color: $gray;
+          font-size: 13px;
+          padding-top: 1px;
+          padding-left: 48px;
+        }
+      }
+    }
+  }
+  &__rightbar {
+    height: 100vh;
+    width: 290px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+    &__recommend-user {
+      height: 400px;
+      width: 258px;
+      background-color: $white;
+      background-clip: inherit;
+      border: 1px solid #e6ecf0;
+      line-height: inherit;
+      padding: 15px;
+      margin-bottom: 10px;
+      .header {
+        height: 23px;
+        width: 144px;
+        float: left;
+        line-height: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .update {
+        float: left;
+        color: $light_blue;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+      .all-link {
+        font-size: 12px;
+        color: $light_blue;
+        float: left;
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+      .user-small-list-item {
+        clear: both;
+        min-height: 48px;
+        border-bottom: 1px solid #e6ecf0;
+        padding-bottom: 8px;
+        margin-top: 10px;
+        .icon {
+          float: left;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+        }
+        .lists {
+          height: 48px;
+          width: 180px;
+          float: left;
+          padding-left: 10px;
+          .name {
+            height: 16px;
+            width: 70px;
+            float: left;
+            padding-bottom: 5px;
+            color: #14171a;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .username {
+            height: 16px;
+            width: 70px;
+            float: left;
+            color: $gray;
+            font-size: 14px;
+          }
+          .following-buttun {
+            height: 16px;
+            width: 66px;
+            clear: both;
+            background-color: $white;
+            line-height: 16px;
+            padding: 4px 12px;
+            color: $light_blue;
+            font-size: 12px;
+            border-color: $light_blue;
+            border: 1px solid $light_blue;
+            border-radius: 100px;
+            cursor: pointer;
+            font-weight: bold;
+            position: relative;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    &__footer {
+      height: 173px;
+      width: 258px;
+      background-color: $white;
+      border: 1px solid #e6ecf0;
+      padding: 15px;
+      .item {
+        float: left;
+        padding-right: 8px;
+        color: $gray;
+        font-size: 11px;
+      }
+    }
+  }
+}
