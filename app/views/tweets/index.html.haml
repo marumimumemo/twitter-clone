@@ -1,0 +1,93 @@
+.topbar
+  .topbar__navigation
+    .topbar__navigation__left
+      .home
+        = link_to "#" do
+          %i.fa.fa-home
+          .text ホーム
+      .moment
+        = link_to "#" do
+          %i.fa.fa-bolt
+          .text モーメント
+      .notification
+        = link_to "#" do
+          %i.fa.fa-bell
+          .text 通知
+      .message
+        = link_to "#" do
+          %i.fa.fa-envelope
+          .text メッセージ
+    .bird-icon
+      = link_to "#" do
+        %i.fa.fa-twitter
+    .topbar__navigation__right
+      .search
+        %form.search
+          %input.keyword(placeholder="キーワード検索" type="text")
+          %label
+        %i.fa.fa-search
+      .user-icon
+      .tweet-buttun ツイート
+.contents
+  .contents__leftbar
+    .contents__leftbar__profile
+      .profile-bg
+      .profile-icon-link
+        %img.icon
+      .user-field
+        .name 森保 一
+        .user-name @poichi
+      .tweets
+        .tweets-label ツイート
+        .tweets-count 9,898
+      .following
+        .following-label フォロー
+        .following-count 2,929
+      .followed
+        .followed-label フォロワー
+        .followed-count 3,562
+    .contents__leftbar__recommend-trend
+      .header おすすめトレンド
+      .change-trends 変更する
+      .trend-item
+        =render "trend"
+  .contents__timeline
+    .contents__timeline__tweetbox
+      %img.icon
+      .tweet-editer
+        %form.rich-editor
+          %input.box(type="text")
+          %label
+        .text いまどうしてる？
+        %span.filelabel
+          %i.fa.fa-image
+        %input.file(type="file" name="datafile" id="filesend")
+    .contents__timeline__new-tweets-bar 新しいツイートを表示
+    .contents__timeline__tweet
+      =render "tweet"
+  .contents__rightbar
+    .contents__rightbar__recommend-user
+      .header おすすめユーザー
+      .update 更新
+      .all-link すべて見る
+      .user-small-list-item
+        %img.icon
+        .lists
+          =render "recommend"
+      .user-small-list-item
+    .contents__rightbar__footer
+      .item ©️2018 Twitter
+      .item Twitterについて
+      .item ヘルプセンター
+      .item 規約
+      .item プライバシーポリシー
+      .item クッキー
+      .item 広告について
+      .item ブランド
+      .item ブログ
+      .item ステータス
+      .item アプリ連携
+      .item 採用情報
+      .item マーケティング
+      .item 広告掲載方法
+      .item 開発者
