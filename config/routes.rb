@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'tweets' => 'tweets#index'
+  resources :tweets, only: [:index]
 end
