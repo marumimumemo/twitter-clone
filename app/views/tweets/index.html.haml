@@ -3,29 +3,29 @@
     .topbar__navigation__left
       .home
         = link_to "#" do
-          %i.fa.fa-home
+          = fa_icon "home"
           .text ホーム
       .moment
         = link_to "#" do
-          %i.fa.fa-bolt
+          = fa_icon "bolt"
           .text モーメント
       .notification
         = link_to "#" do
-          %i.fa.fa-bell
+          = fa_icon "bell"
           .text 通知
       .message
         = link_to "#" do
-          %i.fa.fa-envelope
+          = fa_icon "envelope"
           .text メッセージ
     .bird-icon
       = link_to "#" do
-        %i.fa.fa-twitter
+        = fa_icon "twitter"
     .topbar__navigation__right
       .search
         %form.search
           %input.keyword(placeholder="キーワード検索" type="text")
           %label
-        %i.fa.fa-search
+        = fa_icon "search"
       .user-icon
       .tweet-buttun ツイート
 .contents
@@ -60,7 +60,7 @@
           %label
         .text いまどうしてる？
         %span.filelabel
-          %i.fa.fa-image
+          = fa_icon "image"
         %input.file(type="file" name="datafile" id="filesend")
     .contents__timeline__new-tweets-bar 新しいツイートを表示
     .contents__timeline__tweet
