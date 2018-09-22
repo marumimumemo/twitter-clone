@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
 
-  def index() "index" end
+  def index
+  end
 
 end
