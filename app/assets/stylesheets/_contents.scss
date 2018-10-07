@@ -34,7 +34,7 @@
         margin: -30px 0 0 8px;
         padding: 1px;
 
-        .icon {
+        %img {
           height: 72px;
           width: 72px;
           color: $white;
@@ -153,7 +153,7 @@
       line-height: inherit;
       padding: 15px;
 
-      .header {
+      .trend-header {
         height: 23px;
         width: 144px;
         float: left;
@@ -210,6 +210,7 @@
         padding-top: 10px;
         border-radius: 50%;
         margin-top: 3px;
+        display: block;
       }
 
       .tweet-editer {
@@ -298,7 +299,7 @@
         border-radius: 50%;
       }
 
-      .header {
+      .tweet-header {
         height: 18px;
         width: 506px;
         float: right;
@@ -403,7 +404,7 @@
       padding: 15px;
       margin-bottom: 10px;
 
-      .header {
+      .trend-header {
         height: 23px;
         width: 144px;
         float: left;
