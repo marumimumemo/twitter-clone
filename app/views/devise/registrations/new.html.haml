@@ -1,0 +1,29 @@
+.account
+  .account-header
+    =fa_icon "twitter"
+  .title アカウントを作成
+  .user-form
+    = form_for(resource, as: resource_name, url: registration_path(resource_name) )do |f|
+      = devise_error_messages!
+      .field
+        .field-input
+          = f.text_field :name, autofocus: true, placeholder: "名前", maxlength: "50"
+      .field
+        .field-input
+          = f.email_field :email, placeholder: "メールアドレス"
+      .field
+        .field-input
+          = f.telephone_field :phone, placeholder: "電話番号"
+      .change-buttun-one かわりに電話番号を登録する
+      .change-buttun-two かわりにメールアドレスを登録する
+      .field
+        .field-input
+          = f.password_field :password, autocomplete: "off", placeholder: "パスワード"
+      .field
+        .field-input
+          = f.label :avatar_image, class: 'upload' do
+            プロフィール画像のアップロード
+            = f.file_field :avatar_image, class: 'hidden'
+      .text アカウントを作成すると、利用規約、およびCookieの使用を含むプライバシーポリシーに同意したことになります。あなたのメールアドレスや電話番号を連絡先に保存しているTwitterユーザーに通知などが表示されます。
+      .actions
+        = f.submit "登録する", class: 'btn'

@@ -1,0 +1,96 @@
+.account {
+  height: 600px;
+  width: 600px;
+  margin: 50px auto;
+  background-color: $white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+
+  .account-header {
+    height: 50px;
+
+    .fa {
+	    position: absolute;
+      color: $light_blue;
+      font-size: 26px;
+      top: 60px;
+      left: 50%;
+      font-weight: bold;
+    }
+  }
+
+  .title {
+    height: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 40px;
+  }
+
+  .user-form {
+    padding: 35px;
+
+    .field {
+      padding: 10px;
+
+      #user_name, #user_email, #user_password {
+        height: 43px;
+        width: 490px;
+      }
+
+      #user_email {
+        margin-top: 20px;
+      }
+
+      #user_phone {
+        height: 43px;
+        width: 490px;
+        display: none;
+      }
+
+      .upload {
+        color: #66757f;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+
+    .change-buttun-one {
+      color: $light_blue;
+      font-size: 15px;
+      padding-left: 8px;
+    }
+
+    .change-buttun-two {
+      color: $light_blue;
+      font-size: 15px;
+      padding-left: 8px;
+      display: none;
+    }
+
+    .text {
+      font-size: 14px;
+      padding-left: 8px;
+    }
+
+    .actions {
+
+      .btn {
+        height: 47px;
+        width: 510px;
+        margin-top: 12px;
+        background-color: #4AB3F4;
+        color: $white;
+        border-radius: 80px;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 6px 16px;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+}
