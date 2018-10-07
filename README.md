@@ -4,16 +4,16 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index:true, null: false|
-|mail|string|unique:true, null; false|
-|phone|string|unique:true, null; false|
+|mail|string|unique:true|
+|phone|string|unique:true|
 |password|string|null; false|
 |username|string|unique:true, index:true, null: false|
 |profile|text|null: false|
-|icon_image|text|-------|
+|avatar_image|text|-------|
 |header_image|text|-------|
 |address|string|-------|
 |url|string|-------|
-|birthday|string|-------|
+|birthday|datetime|-------|
 
 ### Association
 - has_many :tweets
