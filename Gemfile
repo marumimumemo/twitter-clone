@@ -54,3 +54,11 @@ gem 'sprockets', '2.11.0'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
+
+# Auth Gems
+gem 'devise'
+
+# image downloader
+gem 'paperclip'
+gem 'carrierwave'
+gem 'mini_magick'
