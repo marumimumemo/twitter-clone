@@ -1,0 +1,284 @@
+.header {
+  height: 340px;
+  width: 100%;
+  background-color: $light_blue;
+
+  .edit__header__image {
+    height: 280px;
+    width: 100%;
+    cursor: pointer;
+
+    .fa {
+      height: 56px;
+      width: 52px;
+      color: $white;
+      font-size: 50px;
+      position: absolute;
+      top: 160px;
+      left: 47%;
+    }
+
+    .text {
+      margin: 0 auto;
+      width: 220px;
+      position: absolute;
+      top: 220px;
+      left: 40%;
+      color: $white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  .image-menu-one {
+    height: 140px;
+    width: 220px;
+    background: $white;
+    border-radius: 4px;
+    position: absolute;
+    top: 220px;
+    left: 40%;
+    font-size: 14px;
+    line-height: 20px;
+    display: none;
+
+    .hidden {
+      display: none;
+    }
+
+    .upload-one {
+      height: 32px;
+      width: 130px;
+      margin-top: 25px;
+      margin-left: 40px;
+      color: #66757f;
+      cursor: pointer;
+      display: block;
+    }
+
+    .delete-buttun {
+      height: 32px;
+      width: 130px;
+      margin-top: 10px;
+      margin-left: 40px;
+      color: #66757f;
+      cursor: pointer;
+    }
+
+    .cancel {
+      height: 32px;
+      width: 130px;
+      margin: 10px 40px;
+      color: #66757f;
+      cursor: pointer;
+    }
+
+    .save-buttun-one {
+      height: 35px;
+      width: 100px;
+      margin-top: 10px;
+      border-color: $light_blue;
+      color: $light_blue;
+      background-color: $white;
+      border: 1px solid $light_blue;
+      border-radius: 100px;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      margin-left: 40px;
+      text-align: center;
+      white-space: nowrap;
+      display: none;
+    }
+  }
+
+  .edit__avatar {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-sizing: border-box;
+    top: 180px;
+    left: 80px;
+    position: absolute;
+
+    .fa {
+      height: 56px;
+      width: 52px;
+      color: $white;
+      font-size: 50px;
+      top: 50px;
+      left: 70px;
+      position: absolute;
+    }
+
+    .text {
+      color: $white;
+      font-weight: bold;
+      font-size: 18px;
+      top: 100px;
+      left: 25px;
+      position: absolute;
+    }
+
+    .image-menu-two {
+      height: 200px;
+      width: 220px;
+      background: $white;
+      border-radius: 4px;
+      position: absolute;
+      top: 110px;
+      left: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      display: none;
+
+      .hidden {
+        display: none;
+      }
+
+      .upload-two {
+        height: 32px;
+        width: 130px;
+        color: #66757f;
+        margin-top: 25px;
+        margin-left: 40px;
+        cursor: pointer;
+        display: block;
+      }
+
+      .delete-buttun {
+        height: 32px;
+        width: 130px;
+        color: #66757f;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+
+      .cancel {
+        height: 32px;
+        width: 130px;
+        margin: 10px 40px;
+        color: #66757f;
+        cursor: pointer;
+      }
+
+      .save-buttun-two {
+        height: 35px;
+        width: 100px;
+        border-color: $light_blue;
+        color: $light_blue;
+        background-color: $white;
+        border: 1px solid $light_blue;
+        border-radius: 100px;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        margin-left: 40px;
+        text-align: center;
+        white-space: nowrap;
+        display: none;
+      }
+    }
+  }
+
+  .bottom {
+    height: 60px;
+    width: 100%;
+    background-color: $white;
+
+    .cancel-buttun {
+      height: 20px;
+      width: 80px;
+      position: absolute;
+      right:10%;
+      margin-top: 10px;
+      margin-right: 10px;
+      background-color: $white;
+      border: 1px solid #66757f;
+      color: #66757f;
+      border-radius: 100px;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      padding: 6px 16px;
+      text-align: center;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  }
+}
+
+.profile-edit {
+  background-color: #E8F5FD;
+  height: 400px;
+  width: 270px;
+  margin-left: 60px;
+  border-radius: 4px;
+  margin-top: 50px;
+  padding: 10px 15px 6px 15px;
+
+  .edit_user {
+    height: 400px;
+    width: 290px;
+
+    .field {
+      color: #66757f;
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 28px;
+      margin: 0 -6px 0 -8px;
+      padding: 4px 7px;
+      width: 100%;
+      border-color: #A4D9F9;
+    }
+
+    .birth {
+      color: #66757f;
+      font-size: 18px;
+    }
+
+    .text, #user_birthday_1i, #user_birthday_2i, #user_birthday_3i {
+      color: #66757f;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .user-name {
+      height: 20px;
+      width: 260px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #1DA1F2;
+    }
+
+    .save-buttun {
+      height: 35px;
+      width: 100px;
+      margin-top: 10px;
+      border-color: $light_blue;
+      color: $light_blue;
+      background-color: $white;
+      border: 1px solid $light_blue;
+      border-radius: 100px;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      padding: 6px 16px;
+      position: absolute;
+      top: 280px;
+      right: 2%;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+}
