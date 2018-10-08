@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :authentication_keys => [:login]
   validates :email_or_phone, presence: true
@@ -9,7 +8,7 @@ class User < ActiveRecord::Base
   before_create :create_username
   attr_accessor :login
 
-  def User.new_username
+  def self.new_username
     n = 9
     format("%0#{n}d", SecureRandom.random_number(10**n))
   end
