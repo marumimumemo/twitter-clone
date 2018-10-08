@@ -26,3 +26,21 @@
     padding-left: 14px;
   }
 }
+
+@mixin m-text-a() {
+  .m-text-a {
+    float: left;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #14171a;
+  }
+}
+
+@mixin m-text-b() {
+  .m-text-b {
+    float: left;
+    cursor: pointer;
+    color: #14171a;
+    text-decoration: none;
+  }
+}

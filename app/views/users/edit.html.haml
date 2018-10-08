@@ -1,0 +1,55 @@
+.header
+  .edit__header__image
+    = image_tag current_user.header_image.url(:header_a)
+    = fa_icon "image"
+    .text ヘッダー画像を変更する
+  .image-menu-one
+    = form_for(current_user) do |f|
+      .field-input
+        = f.label :header_image, class: 'upload-one' do
+          画像のアップロード
+          = f.file_field :header_image, class: 'hidden'
+        .delete-buttun 削除
+        .cancel キャンセル
+        .actions
+          = f.submit "画像を変更", class: 'save-buttun-one'
+  .edit__avatar
+    = image_tag current_user.avatar_image.url(:thumb_c)
+    = fa_icon "image"
+    .text プロフィール画像を変更
+    .image-menu-two
+      = form_for(current_user) do |f|
+        .field-input
+          = f.label :avatar_image, class: 'upload-two' do
+            画像をアップロード
+            = f.file_field :avatar_image, class: 'hidden'
+          .delete-buttun 削除
+          .cancel キャンセル
+          .actions
+            = f.submit "画像を変更", class: 'save-buttun-two'
+  .bottom
+    = link_to "キャンセル", edit_user_path(current_user), class: 'cancel-buttun'
+.profile-edit
+  = form_for(current_user) do |f|
+    .field
+      .field-input
+        = f.text_field :name, autofocus: true
+    .user-name
+      @
+      = current_user.username
+    .field
+      .field-input
+        = f.text_field :profile, placeholder: "自己紹介"
+    .field
+      .field-input
+        = f.text_field :address, placeholder: "場所"
+    .field
+      .field-input
+        = f.url_field :url, placeholder: "ホームページ"
+    .field
+      .field-input
+        .birth 誕生日
+        .text このアカウントがビジネスやイベント、または猫のためのものであっても、利用者の生年月日が必要です。
+        = f.date_select :birthday, use_month_numbers: true, start_year: 2018, end_year: 1911
+    .actions
+      = f.submit "変更を保存", class: 'save-buttun'

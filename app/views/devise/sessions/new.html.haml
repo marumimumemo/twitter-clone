@@ -1,0 +1,53 @@
+.left
+  .communication
+    .communication__item
+      =fa_icon "search"
+      .text あなたの「好き」をフォローしよう。
+    .communication__item
+      =fa_icon "users"
+      .text 話題のトピックを追いかけましょう。
+    .communication__item
+      =fa_icon "comment"
+      .text Twitterに参加しよう。
+.right
+  .login
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        .field-input
+          = f.text_field :login, autofocus: true, placeholder:"電話番号/メールアドレス/ユーザー名"
+      .field
+        .field-input
+          = f.password_field :password, autocomplete: "off", placeholder:"パスワード"
+      .login__buttun
+        = f.submit "ログイン", class: "btn"
+      .forgot
+        - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+          = link_to "パスワードを忘れた場合はこちら", new_password_path(resource_name), class: "btn"
+          %br/
+  .signup
+    =fa_icon "twitter"
+    .title 「いま」起きていることを見つけよう
+    .subtitle Twitterをはじめよう
+    .buttun__signup
+      - if devise_mapping.registerable? && controller_name != 'registrations'
+        = link_to "アカウント作成", new_registration_path(resource_name), class: "btn"
+        %br/
+.footer
+  .item Twitterについて
+  .item ヘルプセンター
+  .item ブログ
+  .item ステータス
+  .item 採用情報
+  .item 規約
+  .item プライバシーポリシー
+  .item クッキー
+  .item 広告について
+  .item ブランド
+  .item アプリ連携
+  .item 広告管理画面
+  .item マーケティング
+  .item 広告掲載方法
+  .item 開発者
+  .item プロフィール一覧
+  .item 設定
+  .item ©️2018 Twitter

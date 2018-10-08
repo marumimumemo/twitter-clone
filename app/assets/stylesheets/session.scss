@@ -1,0 +1,185 @@
+.left {
+  float: left;
+  height: 610px;
+  width: 50%;
+  background-color: $light_blue;
+
+  .communication {
+    height: 264px;
+    width: 440px;
+    margin: 180px auto;
+
+    &__item {
+      clear: both;
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 35px;
+      padding-left: 35px;
+
+      .fa {
+        float: left;
+        font-size: 30px;
+      }
+
+      .text {
+        float: left;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.right {
+  float: right;
+  height: 610px;
+  width: 50%;
+
+  .login {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 25px;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-right: 20px;
+
+    .field {
+      float: left;
+      height: 47px;
+      width: 182px;
+      margin-right: 23px;
+
+      .field-input {
+        margin-top: 12px;
+        padding: 12px;
+        font-size: 14px;
+
+        #user_login {
+          height: 35px;
+          width: 182px;
+        }
+      }
+    }
+
+    .field {
+      float: left;
+      height: 47px;
+      width: 182px;
+      margin-right: 23px;
+
+      .field-input {
+        margin-top: 12px;
+        padding: 12px;
+        font-size: 14px;
+
+        #user_password {
+          height: 35px;
+          width: 182px;
+        }
+      }
+    }
+
+    .login__buttun{
+      float: left;
+      width: 53px;
+
+      .btn {
+        margin-top: 20px;
+        margin-left: 10px;
+        border: 1px solid $light_blue;
+        color: $light_blue;
+        border-radius: 80px;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 12px;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+
+    .forgot {
+      clear: both;
+      height: 36px;
+      width: 182px;
+      position: absolute;
+      top: 65px;
+      right: 67%;
+
+      .btn {
+        color: #aab8c2;
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .signup {
+    height: 312px;
+    width: 350px;
+    margin: 160px auto;
+
+    .fa {
+        font-size: 50px;
+        color: $light_blue;
+    }
+
+    .title {
+      height: 72px;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      height: 24px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 44px;
+    }
+
+    .buttun__signup {
+      height: 20px;
+      margin-top: 12px;
+      background-color: $light_blue;
+      border-radius: 80px;
+      box-shadow: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      padding: 6px 16px;
+      text-align: center;
+      white-space: nowrap;
+
+      .btn {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 65px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  background-color: $white;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #e6ecf0;
+
+  .item {
+    float: left;
+    color: #aab8c2;
+    background: transparent;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 8px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+}

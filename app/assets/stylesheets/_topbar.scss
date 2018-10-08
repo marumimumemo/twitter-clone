@@ -110,15 +110,135 @@
         }
       }
 
-      .user-icon {
+      #navi {
+        float: left;
         height: 32px;
         width: 32px;
-        float: left;
         margin-top: 10px;
         margin-right: 10px;
         border-radius: 50%;
         box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-        display: block;
+
+        .menu {
+          float: left;
+          height: 280px;
+          width: 200px;
+          min-width: 192px;
+          position: absolute;
+          top: calc(100% - -10px - 2px);
+          right: calc(50% - 10px - 9px);
+          z-index: 900;
+          padding: 10px 0;
+          margin: 2px 0 0;
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+          display: none;
+
+          &__name {
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 18px;
+          }
+
+          &__user-name {
+            margin-left: 15px;
+            font-size: 14px;
+            color: $gray;
+          }
+
+          &__user-link {
+            height: 36px;
+            color: $gray;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 16px;
+
+            .fa {
+              float: left;
+              color: $gray;
+              font-size: 20px;
+              margin-top: 15px;
+              margin-right: 10px;
+            }
+
+            @include m-text-a();
+
+          }
+
+          &__list {
+            clear: both;
+            height: 36px;
+            color: $gray;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 16px;
+
+            .fa {
+              float: left;
+              color: $gray;
+              font-size: 16px;
+              margin-top: 15px;
+              margin-right: 5px;
+            }
+
+            @include m-text-a();
+
+          }
+
+          &__moment {
+            clear: both;
+            height: 36px;
+            color: $gray;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 16px;
+
+            .fa {
+              float: left;
+              color: $gray;
+              font-size: 20px;
+              margin-top: 15px;
+              margin-right: 10px;
+            }
+
+            @include m-text-a();
+
+          }
+
+          &__setting {
+            height: 36px;
+            color: $gray;
+            font-size: 14px;
+            margin-top: 14px;
+            padding: 0 16px;
+
+            @include m-text-b();
+
+          }
+
+          &__help-center {
+            height: 36px;
+            color: $gray;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 16px;
+
+            @include m-text-b();
+
+          }
+
+          &__logout {
+            height: 36px;
+            color: $gray;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 16px;
+
+            @include m-text-b();
+
+          }
+        }
       }
 
       .tweet-buttun {
