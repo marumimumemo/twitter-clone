@@ -36,7 +36,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
-|user_id|reference|index:true, null: false, foreign_key: true|
+|user_id|references|index:true, null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -55,11 +55,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|text|index:true, null: false|
-|user_id|reference|index:true, null: false, foreign_key: true|
-|tweet_id|reference|foreign_key: true|
-|comment_id|reference|foreign_key: true|
-|moment_id|reference|foreign_key: true|
-|message_id|reference|foreign_key: true|
+|user_id|references|index:true, null: false, foreign_key: true|
+|tweet_id|references|foreign_key: true|
+|comment_id|references|foreign_key: true|
+|moment_id|references|foreign_key: true|
+|message_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -72,8 +72,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
-|user_id|reference|index:true, null: false, foreign_key: true|
-|tweet_id|reference|null: false, foreign_key: true|
+|user_id|references|index:true, null: false, foreign_key: true|
+|tweet_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -99,9 +99,9 @@
 ## likes table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|index:true, null: false, foreign_key: true|
-|tweet_id|reference|foreign_key: true|
-|comment_id|reference|foreign_key: true|
+|user_id|references|index:true, null: false, foreign_key: true|
+|tweet_id|references|foreign_key: true|
+|comment_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -112,9 +112,9 @@
 ## retweets table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|index:true, null: false, foreign_key: true|
-|tweet_id|reference|foreign_key: true|
-|comment_id|reference|foreign_key: true|
+|user_id|references|index:true, null: false, foreign_key: true|
+|tweet_id|references|foreign_key: true|
+|comment_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -128,9 +128,9 @@
 |question|text|null: false|
 |voting_period|string|null: false|
 |answer|text|null: false|
-|user_id|reference|null: false, foreign_key: true|
-|tweet_id|reference|foreign_key: true|
-|comment_id|reference|foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|tweet_id|references|foreign_key: true|
+|comment_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -151,8 +151,8 @@
 ## tweet_tags table
 |Column|Type|Options|
 |------|----|-------|
-|tweet_id|reference|null: false, foreign_key: true|
-|tag_id|reference|null: false, foreign_key: true|
+|tweet_id|references|null: false, foreign_key: true|
+|tag_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :tweet
@@ -161,8 +161,8 @@
 ## comment_tags table
 |Column|Type|Options|
 |------|----|-------|
-|comment_id|reference|null: false, foreign_key: true|
-|tag_id|reference|null: false, foreign_key: true|
+|comment_id|references|null: false, foreign_key: true|
+|tag_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :comment
@@ -173,12 +173,12 @@
 |------|----|-------|
 |notified_by|references|index: true,null: false|
 |notified_type|string|null: false|
-|user_id|reference|null: false, foreign_key: true|
-|tweet_id|reference|foreign_key: true|
-|like_id|reference|foreign_key: true|
-|retweet_id|reference|foreign_key: true|
-|comment_id|reference|foreign_key: true|
-|relationship_id|reference|foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|tweet_id|references|foreign_key: true|
+|like_id|references|foreign_key: true|
+|retweet_id|references|foreign_key: true|
+|comment_id|references|foreign_key: true|
+|relationship_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -194,8 +194,8 @@
 |------|----|-------|
 |title|string|index: true,null: false|
 |body |text|null: false|
-|user_id|reference|index: true, null: false, foreign_key: true|
-|tweet_id|reference|null: false, foreign_key: true|
+|user_id|references|index: true, null: false, foreign_key: true|
+|tweet_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -218,8 +218,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|list_id|reference|null: false, foreign_key: true|
-|user_id|reference|null: false, foreign_key: true|
+|list_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :list
@@ -240,8 +240,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|chatroom_id|reference|null: false, foreign_key: true|
-|user_id|reference|null: false, foreign_key: true|
+|chatroom_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :chatroom
@@ -252,8 +252,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |body  |text|null: false|
-|user_id|reference|null: false, foreign_key: true|
-|chatroom_id|reference|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|chatroom_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -265,8 +265,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |address|string|index: true, null: false|
-|user_id|reference|index: true, null: false, foreign_key: true|
-|tweet_id|reference|null: false, foreign_key: true|
+|user_id|references|index: true, null: false, foreign_key: true|
+|tweet_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
