@@ -22,6 +22,10 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :thumb_c do
    process resize_to_fill: [200, 200, "Center"]
+  end
+
+  version :thumb_d do
+   process resize_to_fill: [45, 45, "Center"]
    process :round_image
   end
 
