@@ -59,6 +59,5 @@ gem 'font-awesome-rails'
 gem 'devise'
 
 # image downloader
-gem 'paperclip'
 gem 'carrierwave'
 gem 'mini_magick'
