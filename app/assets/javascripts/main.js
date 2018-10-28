@@ -66,6 +66,86 @@ $(document).on('turbolinks:load', function() {
         $('.save-buttun-two').show();
     });
 
+    $('#tweet_body').click(function(){
+        $('.contents__timeline__tweetbox__one').hide();
+    });
+
+    $('#tweet_body').click(function(){
+        $('.contents__timeline__tweetbox__two').show();
+    });
+
+    $('.fa-circle').click(function(){
+        $('.contents__timeline__tweetbox__one').show();
+    });
+
+    $('.fa-circle').click(function(){
+        $('.contents__timeline__tweetbox__two').hide();
+    });
+
+    $('.fa-star').on("mouseover",function(){
+        $('.guide-emoji').show();
+    }).on("mouseout", function(){
+      $(".guide-emoji").hide();
+    });
+
+    $('.fa-image').on("mouseover",function(){
+        $('.guide-image').show();
+    }).on("mouseout", function(){
+      $(".guide-image").hide();
+    });
+
+    $('.fa-align-left').on("mouseover",function(){
+        $('.guide-vote').show();
+    }).on("mouseout", function(){
+      $(".guide-vote").hide();
+    });
+
+    $('.fa-map-pin').on("mouseover",function(){
+        $('.guide-address').show();
+    }).on("mouseout", function(){
+      $(".guide-address").hide();
+    });
+
+    $('.fa-image').on("mouseover",function(){
+        $('.guide-image').show();
+    }).on("mouseout", function(){
+      $(".guide-image").hide();
+    });
+
+    $('.fa-comment').on("mouseover",function(){
+        $('.guide-comment').show();
+    }).on("mouseout", function(){
+      $(".guide-comment").hide();
+    });
+
+    $('.fa-retweet').on("mouseover",function(){
+        $('.guide-retweet').show();
+    }).on("mouseout", function(){
+      $(".guide-retweet").hide();
+    });
+
+    $('.fa-heart').on("mouseover",function(){
+        $('.guide-like').show();
+    }).on("mouseout", function(){
+      $(".guide-like").hide();
+    });
+
+    $('.fa-envelope').on("mouseover",function(){
+        $('.guide-message').show();
+    }).on("mouseout", function(){
+      $(".guide-message").hide();
+    });
+
+    $('.fa-caret-down').on("mouseover",function(){
+        $('.guide-other').show();
+    }).on("mouseout", function(){
+      $(".guide-other").hide();
+    });
+
+    $('.fa-caret-down').click(function(){
+        $('.other-menu').toggle();
+    });
+
   });
 
 });

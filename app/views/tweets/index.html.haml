@@ -83,20 +83,46 @@
       .trend-item
         =render "trend"
   .contents__timeline
-    .contents__timeline__tweetbox
+    .contents__timeline__tweetbox__one
       .icon
         = image_tag current_user.avatar_image.url(:thumb_a)
       .tweet-editer
-        %form.rich-editor
-          %input.box(type="text")
-          %label
-        .text いまどうしてる？
-        %span.filelabel
-          = fa_icon "image"
-        %input.file(type="file" name="datafile" id="filesend")
+        .rich-editor
+          = form_for(@tweet) do |f|
+            .field
+              .field-input
+                = f.text_field :body
+                = f.label :image, class: 'image-upload' do
+                  = fa_icon "image"
+                  = f.file_field :image, class: 'hidden'
+                = f.submit '', class: 'form__submit'
+              .text いまどうしてる？
+              .guide-image 画像/動画を追加
+    .contents__timeline__tweetbox__two
+      .icon
+        = image_tag current_user.avatar_image.url(:thumb_a)
+      .tweet-editer
+        .rich-editor
+          = form_for(@tweet) do |f|
+            .field
+              .field-input
+                = f.text_area :body, placeholder: "いまどうしてる？"
+                = f.fields_for :images, multiple: true do |i|
+                  = i.label :image, class: 'image-upload' do
+                    = fa_icon "image"
+                  = i.file_field :image, class: 'hidden'
+                = f.submit 'ツイート', class: 'tweet-buttun'
+                = fa_icon "star"
+                = fa_icon "circle"
+                = fa_icon "align-left"
+                = fa_icon "map-pin"
+                .guide-emoji 絵文字を追加
+                .guide-image 画像/動画を追加
+                .guide-vote 投票を追加
+                .guide-address 位置情報を追加
     .contents__timeline__new-tweets-bar 新しいツイートを表示
     .contents__timeline__tweet
-      =render "tweet"
+      = render partial: 'tweet', collection: @tweets
   .contents__rightbar
     .contents__rightbar__recommend-user
       .trend-header おすすめユーザー

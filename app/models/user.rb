@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   mount_uploader :avatar_image, ImageUploader
   before_create :create_username
   attr_accessor :login
+  has_many :tweets
+  has_many :images, through: :tweets
 
   def self.new_username
     n = 9
