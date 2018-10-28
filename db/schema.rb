@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181008052602) do
+ActiveRecord::Schema.define(version: 20181013080947) do
+
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "image",      limit: 255
+    t.integer  "tweet_id",   limit: 4,   null: false
+  end
+
+  add_index "images", ["tweet_id"], name: "index_images_on_tweet_id", using: :btree
 
   create_table "tweets", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -48,5 +57,6 @@ ActiveRecord::Schema.define(version: 20181008052602) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "images", "tweets"
   add_foreign_key "tweets", "users"
 end
