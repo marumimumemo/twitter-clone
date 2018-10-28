@@ -9,8 +9,8 @@
 |password|string|null; false|
 |username|string|unique:true, index:true, null: false|
 |profile|text|null: false|
-|avatar_image|text|-------|
-|header_image|text|-------|
+|avatar_image|string|-------|
+|header_image|string|-------|
 |address|string|-------|
 |url|string|-------|
 |birthday|datetime|-------|
@@ -54,7 +54,7 @@
 ## images table
 |Column|Type|Options|
 |------|----|-------|
-|image|text|index:true, null: false|
+|image|string||
 |user_id|references|index:true, null: false, foreign_key: true|
 |tweet_id|references|foreign_key: true|
 |comment_id|references|foreign_key: true|
