@@ -29,6 +29,10 @@ class ImageUploader < CarrierWave::Uploader::Base
    process :round_image
   end
 
+  version :tweet_image do
+   process resize_to_fill: [300, 200, "Center"]
+  end
+
   private
   def round_image
     manipulate! do |img|
