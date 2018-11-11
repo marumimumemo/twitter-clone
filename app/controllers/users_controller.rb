@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @tweets = Tweet.where(user_id: current_user.id).order("created_at DESC")
+    @tweets = current_user.tweets.order("created_at DESC")
   end
 
   private
