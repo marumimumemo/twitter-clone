@@ -32,10 +32,9 @@
           .menu__name
             = current_user.name
           .menu__user-name
-            @
             = current_user.username
           .menu__user-link
-            = link_to "/users/= current_user.id" do
+            = link_to user_path(current_user.id) do
               = fa_icon "male"
               .m-text-a プロフィール
           .menu__list
@@ -64,11 +63,10 @@
         = image_tag current_user.avatar_image.url(:thumb_b)
       .user-field
         .name
-          = link_to "/users/= current_user.id" do
+          = link_to user_path(current_user.id) do
             = current_user.name
         .user-name
-          = link_to "/users/= current_user.id" do
-            @
+          = link_to user_path(current_user.id) do
             = current_user.username
       .tweets
         .tweets-label ツイート
