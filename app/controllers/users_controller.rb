@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @tweets = current_user.tweets.order("created_at DESC")
+  end
+
   private
 
   def user_params

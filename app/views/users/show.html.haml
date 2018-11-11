@@ -1,0 +1,132 @@
+.topbar
+  .topbar__navigation
+    .topbar__navigation__left
+      .home
+        = link_to root_path do
+          = fa_icon "home"
+          .text ホーム
+      .moment
+        = link_to "#" do
+          = fa_icon "bolt"
+          .text モーメント
+      .notification
+        = link_to "#" do
+          = fa_icon "bell"
+          .text 通知
+      .message
+        = link_to "#" do
+          = fa_icon "envelope"
+          .text メッセージ
+    .bird-icon
+      = link_to "#" do
+        = fa_icon "twitter"
+    .topbar__navigation__right
+      .search
+        %form.search
+          %input.keyword(placeholder="キーワード検索" type="text")
+          %label
+        = fa_icon "search"
+      #navi
+        = image_tag current_user.avatar_image.url(:thumb_a)
+        .menu
+          .menu__name
+            = current_user.name
+          .menu__user-name
+            = current_user.username
+          .menu__user-link
+            = link_to edit_user_path(current_user) do
+              = fa_icon "male"
+              .m-text-a プロフィール
+          .menu__list
+            = link_to "#" do
+              = fa_icon "list"
+              .m-text-a リスト
+          .menu__moment
+            = link_to "#" do
+              = fa_icon "bolt"
+              .m-text-a モーメント
+          .menu__setting
+            = link_to "#" do
+              .m-text-b 設定とプライバシー
+          .menu__help-center
+            = link_to "#" do
+              .m-text-b ヘルプセンター
+          .menu__logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'm-text-b'
+      .tweet-buttun ツイート
+.header__show
+  = image_tag current_user.header_image.url(:header_a)
+.avatar__show
+  = image_tag current_user.avatar_image.url(:thumb_c)
+.mypage__bar
+  .mypage__bar__main
+    .tweets
+      .tweets-label ツイート
+      .tweets-count 9,898
+    .following
+      .following-label フォロー
+      .following-count 2,929
+    .followed
+      .followed-label フォロワー
+      .followed-count 3,562
+    .likes
+      .likes-label いいね
+      .likes-count 3,562
+    .lists
+      .lists-label リスト
+      .lists-count 2,789
+    .moments
+      .moments-label モーメント
+      .moments-count 1,112
+  .edit__profile
+    = link_to "プロフィールを編集", edit_user_path(current_user)
+.show__contents
+  .profile__box
+    .profile__box__name
+      = current_user.name
+    .profile__box__user-name
+      = current_user.username
+    .profile__box__text
+      = current_user.profile
+    .profile__box__url
+      = current_user.url
+    .profile__box__address
+      = current_user.address
+  .show__timeline
+    .show__timeline__bar
+      .show__timeline__bar__tweets ツイート
+      .show__timeline__bar__reply ツイートと返信
+      .show__timeline__bar__media メディア
+    .show__timeline__tweet
+      = render partial: 'tweet', collection: @tweets
+  .rightbar__show
+    .rightbar__show__recommend-user
+      .trend-header おすすめユーザー
+      .update 更新
+      .all-link すべて見る
+      .user-small-list-item
+        %img.icon
+        .lists
+          =render "tweets/recommend"
+      .user-small-list-item
+    .rightbar__show__recommend-trend
+      .trend-header おすすめトレンド
+      .change-trends 変更する
+      .trend-item
+        =render "tweets/trend"
+    .rightbar__show__footer
+      .item ©️2018 Twitter
+      .item Twitterについて
+      .item ヘルプセンター
+      .item 規約
+      .item プライバシーポリシー
+      .item クッキー
+      .item 広告について
+      .item ブランド
+      .item ブログ
+      .item ステータス
+      .item アプリ連携
+      .item 採用情報
+      .item マーケティング
+      .item 広告掲載方法
+      .item 開発者
