@@ -2,7 +2,7 @@
   .topbar__navigation
     .topbar__navigation__left
       .home
-        = link_to "#" do
+        = link_to root_path do
           = fa_icon "home"
           .text ホーム
       .moment
@@ -35,7 +35,7 @@
             @
             = current_user.username
           .menu__user-link
-            = link_to edit_user_path(current_user) do
+            = link_to "/users/= current_user.id" do
               = fa_icon "male"
               .m-text-a プロフィール
           .menu__list
@@ -64,10 +64,12 @@
         = image_tag current_user.avatar_image.url(:thumb_b)
       .user-field
         .name
-          = current_user.name
+          = link_to "/users/= current_user.id" do
+            = current_user.name
         .user-name
-          @
-          = current_user.username
+          = link_to "/users/= current_user.id" do
+            @
+            = current_user.username
       .tweets
         .tweets-label ツイート
         .tweets-count 9,898
@@ -120,7 +122,8 @@
                 .guide-image 画像/動画を追加
                 .guide-vote 投票を追加
                 .guide-address 位置情報を追加
-    .contents__timeline__new-tweets-bar 新しいツイートを表示
+    .contents__timeline__new-tweets-bar
+      = link_to "新しいツイートを表示", root_path
     .contents__timeline__tweet
       = render partial: 'tweet', collection: @tweets
   .contents__rightbar
