@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
 
   private
   def create_username
-    self.username = User.new_username
+    self.username = "@" + User.new_username
   end
 
   def email_or_phone

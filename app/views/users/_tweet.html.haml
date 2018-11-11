@@ -8,9 +8,7 @@
     .fullname
       = tweet.user.name
     .username
-      @
       = tweet.user.username
-      •
     .timestamp
       = time_ago_in_words(tweet.created_at)
     = fa_icon "caret-down"
