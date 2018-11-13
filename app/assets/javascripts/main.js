@@ -143,7 +143,11 @@ $(document).on('turbolinks:load', function() {
     });
 
     $('.fa-caret-down').click(function(){
-        $('.other-menu').toggle();
+        $(this).siblings('.delete-menu').toggle();
+    });
+
+    $('.fa-caret-down').click(function(){
+        $(this).siblings('.other-menu').toggle();
     });
 
   });
