@@ -9,7 +9,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to root_path
+      redirect_to root_path, notice: "ツイートが投稿されました"
     else
       render :index
     end
@@ -17,8 +17,11 @@ class TweetsController < ApplicationController
 
   def destroy
     tweet = Tweet.find(params[:id])
-    tweet.destroy if tweet.user_id == current_user.id
-    redirect_to root_path
+    if tweet.destroy
+      redirect_to root_path, notice: "ツイートが削除されました"
+    else
+      render :index
+    end
   end
 
   private
