@@ -12,13 +12,23 @@
     .timestamp
       = time_ago_in_words(tweet.created_at)
     = fa_icon "caret-down"
-    .other-menu
-      .other-menu__copy ツイートへのリンクをコピー
-      .other-menu__site ツイートをサイトに埋め込む
-      .other-menu__mute さんをミュート
-      .other-menu__block さんをブロック
-      .other-menu__report ツイートを報告する
-      .other-menu__moment モーメントに追加
+    - if current_user.id == tweet.user_id
+      .delete-menu
+        .delete-menu__share ダイレクトメッセージで共有
+        .delete-menu__copy ツイートへのリンクをコピー
+        .delete-menu__site ツイートをサイトに埋め込む
+        .delete-menu__pintweet プロフィールを固定表示しない
+        .delete-menu__delete
+          = link_to 'ツイートを削除', tweet_path(tweet.id), method: :delete, data: {confirm: "このツイートを本当に削除しますか?"}
+        .delete-menu__moment モーメントに追加
+    - else
+      .other-menu
+        .other-menu__copy ツイートへのリンクをコピー
+        .other-menu__site ツイートをサイトに埋め込む
+        .other-menu__mute さんをミュート
+        .other-menu__block さんをブロック
+        .other-menu__report ツイートを報告する
+        .other-menu__moment モーメントに追加
   .tweet-text
     .body
     = tweet.body
