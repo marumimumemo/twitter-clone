@@ -520,13 +520,90 @@
             font-size: 20px;
           }
 
+          .delete-menu {
+            height: 300px;
+            width: 240px;
+            min-width: 192px;
+            position: absolute;
+            top: 30%;
+            right: 5%;
+            z-index: 900;
+            padding: 10px 0;
+            margin: 2px 0 0;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+            display: none;
+
+            &__share {
+              height: 36px;
+              color: $gray;
+              font-size: 14px;
+              margin-top: 14px;
+              padding: 0 16px;
+
+              @include m-text-b();
+            }
+
+            &__copy {
+              height: 36px;
+              color: $gray;
+              font-size: 14px;
+              margin-top: 14px;
+              padding: 0 16px;
+
+              @include m-text-b();
+            }
+
+            &__site {
+              height: 36px;
+              color: $gray;
+              font-size: 14px;
+              margin-top: 14px;
+              padding: 0 16px;
+
+              @include m-text-b();
+            }
+
+            &__pintweet {
+              height: 36px;
+              color: $gray;
+              font-size: 14px;
+              margin-top: 14px;
+              padding: 0 16px;
+
+              @include m-text-b();
+            }
+
+            &__delete {
+              height: 36px;
+              color: $gray;
+              font-size: 14px;
+              margin-top: 14px;
+              padding: 0 16px;
+              text-decoration: none;
+
+              @include m-text-b();
+            }
+
+            &__moment {
+              height: 36px;
+              color: $gray;
+              font-size: 14px;
+              margin-top: 14px;
+              padding: 0 16px;
+
+              @include m-text-b();
+            }
+          }
+
           .other-menu {
             height: 300px;
             width: 240px;
             min-width: 192px;
             position: absolute;
-            top: 40%;
-            right: -35%;
+            top: 30%;
+            right: 5%;
             z-index: 900;
             padding: 10px 0;
             margin: 2px 0 0;
