@@ -1,0 +1,38 @@
+.notification {
+  .notice {
+    height: 35px;
+    width: 600px;
+    background-color: $white;
+    color: $light_blue;
+    text-align: center;
+    top: 55px;
+    left: 26%;
+    padding-top: 6px;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid #e6ecf0;
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+  }
+
+  .alert {
+    height: 35px;
+    width: 600px;
+    background-color: $white;
+    color: $light_blue;
+    padding-top: 6px;
+    text-align: center;
+    top: 55px;
+    left: 26%;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid #e6ecf0;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
