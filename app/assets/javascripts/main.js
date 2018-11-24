@@ -150,6 +150,22 @@ $(document).on('turbolinks:load', function() {
         $(this).siblings('.other-menu').toggle();
     });
 
+    $('#tweet_body').click(function(){
+        $('.detail__timeline__tweetbox__one').hide();
+    });
+
+    $('#tweet_body').click(function(){
+        $('.detail__timeline__tweetbox__two').show();
+    });
+
+    $('.fa-circle').click(function(){
+        $('.detail__timeline__tweetbox__one').show();
+    });
+
+    $('.fa-circle').click(function(){
+        $('.detail__timeline__tweetbox__two').hide();
+    });
+
   });
 
 });
