@@ -113,33 +113,33 @@ $(document).on('turbolinks:load', function() {
     });
 
     $('.fa-comment').on("mouseover",function(){
-        $('.guide-comment').show();
+        $(this).siblings('.guide-comment').show();
     }).on("mouseout", function(){
-      $(".guide-comment").hide();
+      $(this).siblings(".guide-comment").hide();
     });
 
     $('.fa-retweet').on("mouseover",function(){
-        $('.guide-retweet').show();
+        $(this).siblings('.guide-retweet').show();
     }).on("mouseout", function(){
-      $(".guide-retweet").hide();
+      $(this).siblings(".guide-retweet").hide();
     });
 
     $('.fa-heart').on("mouseover",function(){
-        $('.guide-like').show();
+        $(this).siblings('.guide-like').show();
     }).on("mouseout", function(){
-      $(".guide-like").hide();
+      $(this).siblings(".guide-like").hide();
     });
 
     $('.fa-envelope').on("mouseover",function(){
-        $('.guide-message').show();
+        $(this).siblings('.guide-message').show();
     }).on("mouseout", function(){
-      $(".guide-message").hide();
+      $(this).siblings(".guide-message").hide();
     });
 
     $('.fa-caret-down').on("mouseover",function(){
-        $('.guide-other').show();
+        $(this).siblings('.guide-other').show();
     }).on("mouseout", function(){
-      $(".guide-other").hide();
+      $(this).siblings(".guide-other").hide();
     });
 
     $('.fa-caret-down').click(function(){
@@ -150,11 +150,11 @@ $(document).on('turbolinks:load', function() {
         $(this).siblings('.other-menu').toggle();
     });
 
-    $('#tweet_body').click(function(){
+    $('#comment_body').click(function(){
         $('.detail__timeline__tweetbox__one').hide();
     });
 
-    $('#tweet_body').click(function(){
+    $('#comment_body').click(function(){
         $('.detail__timeline__tweetbox__two').show();
     });
 
