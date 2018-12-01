@@ -361,6 +361,19 @@
             font-size: 20px;
           }
 
+          .guide-other {
+            float: right;
+            height: 25px;
+            width: 50px;
+            background-color: black;
+            color: $white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-left: 8px;
+            display: none;
+          }
+
           .other-menu {
             height: 300px;
             width: 240px;
@@ -445,86 +458,6 @@
           padding-left: 60px;
         }
 
-        .guide {
-          height: 31px;
-          width: 490px;
-          font-size: 12px;
-          padding-top: 20px;
-          padding-left: 60px;
-          position: absolute;
-          bottom: 5;
-
-          .guide-comment {
-            float: left;
-            height: 25px;
-            width: 35px;
-            background-color: black;
-            color: $white;
-            font-size: 12px;
-            border-radius: 5px;
-            padding-top: 4px;
-            padding-left: 8px;
-            margin-right: 10px;
-            display: none;
-          }
-
-          .guide-retweet {
-            float: left;
-            height: 25px;
-            width: 65px;
-            background-color: black;
-            color: $white;
-            font-size: 12px;
-            border-radius: 5px;
-            padding-top: 4px;
-            padding-left: 8px;
-            margin-left: 70px;
-            display: none;
-          }
-
-          .guide-like {
-            float: left;
-            height: 25px;
-            width: 45px;
-            background-color: black;
-            color: $white;
-            font-size: 12px;
-            border-radius: 5px;
-            padding-top: 4px;
-            padding-left: 8px;
-            margin-left: 165px;
-            display: none;
-          }
-
-          .guide-message {
-            float: left;
-            height: 25px;
-            width: 70px;
-            background-color: black;
-            color: $white;
-            font-size: 12px;
-            border-radius: 5px;
-            padding-top: 4px;
-            padding-left: 8px;
-            margin-left: 240px;
-            display: none;
-          }
-
-          .guide-other {
-            float: right;
-            height: 25px;
-            width: 50px;
-            background-color: black;
-            color: $white;
-            font-size: 12px;
-            border-radius: 5px;
-            padding-top: 4px;
-            padding-left: 8px;
-            margin-left: 240px;
-            display: none;
-          }
-        }
-
         .item-footer {
           height: 31px;
           width: 506px;
@@ -538,7 +471,27 @@
             font-size: 14px;
           }
 
-          @include count();
+          .guide-comment {
+            float: left;
+            height: 25px;
+            width: 35px;
+            background-color: black;
+            color: $white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-left: 8px;
+            position: absolute;
+            left: 36%;
+            display: none;
+          }
+
+          .count_comments {
+            float: left;
+            color: $gray;
+            font-size: 12px;
+            padding-left: 14px;
+          }
 
           .fa-retweet {
             float: left;
@@ -547,7 +500,27 @@
             padding-left: 48px;
           }
 
-          @include count();
+          .guide-retweet {
+            float: left;
+            height: 25px;
+            width: 65px;
+            background-color: black;
+            color: $white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-left: 8px;
+            position: absolute;
+            left: 43%;
+            display: none;
+          }
+
+          .count_retweets {
+            float: left;
+            color: $gray;
+            font-size: 12px;
+            padding-left: 14px;
+          }
 
           .fa-heart {
             float: left;
@@ -557,7 +530,27 @@
             padding-left: 48px;
           }
 
-          @include count();
+          .guide-like {
+            float: left;
+            height: 25px;
+            width: 45px;
+            background-color: black;
+            color: $white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-left: 8px;
+            position: absolute;
+            left: 49%;
+            display: none;
+          }
+
+          .count_likes {
+            float: left;
+            color: $gray;
+            font-size: 12px;
+            padding-left: 14px;
+          }
 
           .fa-envelope {
             float: left;
@@ -565,6 +558,21 @@
             font-size: 13px;
             padding-top: 1px;
             padding-left: 48px;
+          }
+
+          .guide-message {
+            float: left;
+            height: 25px;
+            width: 70px;
+            background-color: black;
+            color: $white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-left: 8px;
+            position: absolute;
+            left: 54%;
+            display: none;
           }
         }
       }

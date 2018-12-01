@@ -1,6 +1,5 @@
 .detail__timeline__tweet__box {
   width: 640px;
-  min-height: 100px;
   margin: 0 auto;
   border: 1px solid #e6ecf0;
   padding-top: 60px;
@@ -90,6 +89,19 @@
       font-size: 20px;
       margin-top: 15px;
       margin-right: 25px;
+    }
+
+    .guide-other {
+      float: right;
+      height: 25px;
+      width: 50px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      display: none;
     }
 
     .delete-menu {
@@ -285,85 +297,6 @@
     }
   }
 
-  .guide {
-    height: 31px;
-    width: 590px;
-    font-size: 12px;
-    padding-top: 12px;
-    padding-left: 50px;
-    display: none;
-
-    .guide-comment {
-      float: left;
-      height: 25px;
-      width: 35px;
-      background-color: black;
-      color: $white;
-      font-size: 12px;
-      border-radius: 5px;
-      padding-top: 4px;
-      padding-left: 8px;
-      margin-right: 10px;
-      display: none;
-    }
-
-    .guide-retweet {
-      float: left;
-      height: 25px;
-      width: 65px;
-      background-color: black;
-      color: $white;
-      font-size: 12px;
-      border-radius: 5px;
-      padding-top: 4px;
-      padding-left: 8px;
-      margin-left: 70px;
-      display: none;
-    }
-
-    .guide-like {
-      float: left;
-      height: 25px;
-      width: 45px;
-      background-color: black;
-      color: $white;
-      font-size: 12px;
-      border-radius: 5px;
-      padding-top: 4px;
-      padding-left: 8px;
-      margin-left: 165px;
-      display: none;
-    }
-
-    .guide-message {
-      float: left;
-      height: 25px;
-      width: 70px;
-      background-color: black;
-      color: $white;
-      font-size: 12px;
-      border-radius: 5px;
-      padding-top: 4px;
-      padding-left: 8px;
-      margin-left: 240px;
-      display: none;
-    }
-
-    .guide-other {
-      float: right;
-      height: 25px;
-      width: 50px;
-      background-color: black;
-      color: $white;
-      font-size: 12px;
-      border-radius: 5px;
-      padding-top: 4px;
-      padding-left: 8px;
-      margin-left: 240px;
-      display: none;
-    }
-  }
-
   .item-footer {
     height: 31px;
     width: 590px;
@@ -379,7 +312,28 @@
       font-size: 14px;
     }
 
-    @include count();
+    .guide-comment {
+      float: left;
+      height: 25px;
+      width: 35px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      margin-right: 10px;
+      position: absolute;
+      left: 32%;
+      display: none;
+    }
+
+    .count_comments {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      padding-left: 14px;
+    }
 
     .fa-retweet {
       float: left;
@@ -388,7 +342,27 @@
       padding-left: 48px;
     }
 
-    @include count();
+    .guide-retweet {
+      float: left;
+      height: 25px;
+      width: 65px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 39%;
+      display: none;
+    }
+
+    .count_retweets {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      padding-left: 14px;
+    }
 
     .fa-heart {
       float: left;
@@ -398,7 +372,27 @@
       padding-left: 48px;
     }
 
-    @include count();
+    .guide-like {
+      float: left;
+      height: 25px;
+      width: 45px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 46%;
+      display: none;
+    }
+
+    .count_likes {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      padding-left: 14px;
+    }
 
     .fa-envelope {
       float: left;
@@ -407,11 +401,27 @@
       padding-top: 1px;
       padding-left: 48px;
     }
+
+    .guide-message {
+      float: left;
+      height: 25px;
+      width: 70px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 51%;
+      display: none;
+    }
   }
 
   .detail__timeline__tweetbox__one {
     height: 58px;
-    width: 590px;
+    width: 640px;
+    border-bottom: 1px solid #e6ecf0;
 
     .icon {
       height: 32px;
@@ -432,8 +442,8 @@
       padding: 11px;
       font-size: 20px;
 
-      #tweet_body {
-        font-size: 18px;
+      #comment_body {
+        font-size: 14px;
         width: 100%;
         border: 1px solid #e6ecf0;
         border-radius: 5px;
@@ -470,8 +480,9 @@
 
   .detail__timeline__tweetbox__two {
     height: 150px;
-    width: 590px;
+    width: 640px;
     display: none;
+    border-bottom: 1px solid #e6ecf0;
 
     .icon {
       height: 32px;
@@ -493,7 +504,7 @@
       padding: 11px;
       font-size: 15px;
 
-      #tweet_body {
+      #comment_body {
         font-size: 14px;
         height: 80px;
         width: 100%;
@@ -531,14 +542,6 @@
         padding: 6px 16px;
         text-align: center;
         white-space: nowrap;
-      }
-
-      .fa-circle {
-        float: right;
-        font-size: 14px;
-        position: absolute;
-        right: 30%;
-        bottom: 38%;
       }
 
       .fa-align-left {
@@ -600,5 +603,10 @@
         display: none;
       }
     }
+  }
+
+  .detail__timeline__comment {
+    width: 640px;
+    margin: 0 auto;
   }
 }

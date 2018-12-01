@@ -520,6 +520,19 @@
             font-size: 20px;
           }
 
+          .guide-other {
+            float: right;
+            height: 25px;
+            width: 50px;
+            background-color: black;
+            color: $white;
+            font-size: 12px;
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-left: 8px;
+            display: none;
+          }
+
           .delete-menu {
             height: 300px;
             width: 240px;
@@ -681,14 +694,19 @@
           padding-left: 60px;
         }
 
-        .guide {
+        .item-footer {
           height: 31px;
-          width: 490px;
+          width: 506px;
           font-size: 12px;
-          padding-top: 20px;
+          padding-top: 1px;
           padding-left: 60px;
-          position: absolute;
-          bottom: 5;
+
+          .fa-comment {
+            float: left;
+            color: $gray;
+            font-size: 14px;
+            display: block;
+          }
 
           .guide-comment {
             float: left;
@@ -700,8 +718,23 @@
             border-radius: 5px;
             padding-top: 4px;
             padding-left: 8px;
-            margin-right: 10px;
+            position: absolute;
+            left: 36%;
             display: none;
+          }
+
+          .count_comments {
+            float: left;
+            color: $gray;
+            font-size: 12px;
+            padding-left: 14px;
+          }
+
+          .fa-retweet {
+            float: left;
+            color: $gray;
+            font-size: 14px;
+            padding-left: 48px;
           }
 
           .guide-retweet {
@@ -714,8 +747,24 @@
             border-radius: 5px;
             padding-top: 4px;
             padding-left: 8px;
-            margin-left: 70px;
+            position: absolute;
+            left: 43%;
             display: none;
+          }
+
+          .count_retweets {
+            float: left;
+            color: $gray;
+            font-size: 12px;
+            padding-left: 14px;
+          }
+
+          .fa-heart {
+            float: left;
+            color: $gray;
+            font-size: 13px;
+            padding-top: 1px;
+            padding-left: 48px;
           }
 
           .guide-like {
@@ -728,8 +777,24 @@
             border-radius: 5px;
             padding-top: 4px;
             padding-left: 8px;
-            margin-left: 165px;
+            position: absolute;
+            left: 49%;
             display: none;
+          }
+
+          .count_likes {
+            float: left;
+            color: $gray;
+            font-size: 12px;
+            padding-left: 14px;
+          }
+
+          .fa-envelope {
+            float: left;
+            color: $gray;
+            font-size: 13px;
+            padding-top: 1px;
+            padding-left: 48px;
           }
 
           .guide-message {
@@ -742,65 +807,9 @@
             border-radius: 5px;
             padding-top: 4px;
             padding-left: 8px;
-            margin-left: 240px;
+            position: absolute;
+            left: 54%;
             display: none;
-          }
-
-          .guide-other {
-            float: right;
-            height: 25px;
-            width: 50px;
-            background-color: black;
-            color: $white;
-            font-size: 12px;
-            border-radius: 5px;
-            padding-top: 4px;
-            padding-left: 8px;
-            margin-left: 240px;
-            display: none;
-          }
-        }
-
-        .item-footer {
-          height: 31px;
-          width: 506px;
-          font-size: 12px;
-          padding-top: 1px;
-          padding-left: 60px;
-
-          .fa-comment {
-            float: left;
-            color: $gray;
-            font-size: 14px;
-          }
-
-          @include count();
-
-          .fa-retweet {
-            float: left;
-            color: $gray;
-            font-size: 14px;
-            padding-left: 48px;
-          }
-
-          @include count();
-
-          .fa-heart {
-            float: left;
-            color: $gray;
-            font-size: 13px;
-            padding-top: 1px;
-            padding-left: 48px;
-          }
-
-          @include count();
-
-          .fa-envelope {
-            float: left;
-            color: $gray;
-            font-size: 13px;
-            padding-top: 1px;
-            padding-left: 48px;
           }
         }
       }
