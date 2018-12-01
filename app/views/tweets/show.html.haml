@@ -18,8 +18,7 @@
           = fa_icon "envelope"
           .text メッセージ
     .bird-icon
-      = link_to "#" do
-        = fa_icon "twitter"
+      = fa_icon "twitter"
     .topbar__navigation__right
       .search
         %form.search
@@ -68,6 +67,7 @@
         = @tweet.user.username
     .follow-buttun フォロー中
     = fa_icon "caret-down"
+    .guide-other その他
     - if current_user.id == @tweet.user_id
       .delete-menu
         .delete-menu__share ダイレクトメッセージで共有
@@ -96,50 +96,49 @@
   .status
     .status-retweets 3件のリツイート
     .status-likes 6件のいいね
-  .guide
-    .guide-comment 返信
-    .guide-retweet リツイート
-    .guide-like いいね
-    .guide-message メッセージ
-    .guide-other その他
   .item-footer
     = fa_icon "comment"
-    .count 3
+    .guide-comment 返信
+    .count_comments
+      = @tweet.comments.count
     = fa_icon "retweet"
-    .count 3
+    .guide-retweet リツイート
+    .count_retweets 3
     = fa_icon "heart"
-    .count 3
+    .guide-like いいね
+    .count_likes 3
     = fa_icon "envelope"
+    .guide-message メッセージ
   .detail__timeline__tweetbox__one
     .icon
       = image_tag current_user.avatar_image.url(:thumb_a)
     .tweet-editer
       .rich-editor
-        = form_for("#") do |f|
+        = form_for [@tweet, @comment] do |f|
           .field
             .field-input
-              = f.text_field :body
+              = f.text_field :body, placeholder: " 別のツイートを追加"
               = f.submit '', class: 'form__submit'
-            .text 返信をツイート
             .guide-image 画像/動画を追加
   .detail__timeline__tweetbox__two
     .icon
       = image_tag current_user.avatar_image.url(:thumb_a)
     .tweet-editer
       .rich-editor
-        = form_for("#") do |f|
+        = form_for [@tweet, @comment] do |f|
           .field
             .field-input
-              = f.text_area :body, placeholder: "返信をツイート"
+              = f.text_area :body, placeholder: "別のツイートを追加"
               = f.fields_for :images, multiple: true do |i|
                 = i.label :image, class: 'image-upload' do
                   = fa_icon "image"
                 = i.file_field :image, class: 'hidden'
               = f.submit '返信', class: 'tweet-buttun'
-              = fa_icon "image"
-              = fa_icon "circle"
               = fa_icon "align-left"
               = fa_icon "map-pin"
               .guide-image 画像/動画を追加
               .guide-vote 投票を追加
               .guide-address 位置情報を追加
+  .detail__timeline__comment
+    -if @comments
+      = render partial: 'comment', collection: @comments
