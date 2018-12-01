@@ -4,7 +4,7 @@ class CreateImages < ActiveRecord::Migration
 
       t.timestamps           null: false
       t.string :image
-      t.references :tweet,   null: false, foreign_key: true, index:true
+      t.references :tweet, foreign_key: true, index:true
     end
   end
 end
