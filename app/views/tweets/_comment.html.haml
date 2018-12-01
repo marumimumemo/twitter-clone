@@ -1,0 +1,54 @@
+.comments__timeline__tweet__box
+  .context-bar
+    = fa_icon "heart"
+    .notification 久保裕也さんがいいねしました
+  .icon
+    = image_tag comment.user.avatar_image.url(:thumb_d)
+  .tweet-header
+    .fullname
+      = comment.user.name
+    .username
+      = comment.user.username
+    .timestamp
+      = time_ago_in_words(comment.created_at)
+    = fa_icon "caret-down"
+    .guide-other その他
+    - if current_user.id == comment.user_id
+      .delete-menu
+        .delete-menu__share ダイレクトメッセージで共有
+        .delete-menu__copy ツイートへのリンクをコピー
+        .delete-menu__site ツイートをサイトに埋め込む
+        .delete-menu__pintweet プロフィールを固定表示しない
+        .delete-menu__delete
+          = link_to 'ツイートを削除', tweet_comment_path(@tweet.id, comment.id), method: :delete, data: {confirm: "このツイートを本当に削除しますか?"}
+        .delete-menu__moment モーメントに追加
+    - else
+      .other-menu
+        .other-menu__copy ツイートへのリンクをコピー
+        .other-menu__site ツイートをサイトに埋め込む
+        .other-menu__mute さんをミュート
+        .other-menu__block さんをブロック
+        .other-menu__report ツイートを報告する
+        .other-menu__moment モーメントに追加
+  .reply
+    = "返信先:" + @tweet.user.name + "さん"
+  .tweet-text
+    .body
+    = comment.body
+    .image
+    - comment.images.each do |a|
+      = image_tag a.image.url(:tweet_image)
+  .item-footer
+    = fa_icon "comment"
+    .guide-comment 返信
+    = link_to tweet_path(@tweet.id), method: :get do
+      .count_comments
+        = @tweet.comments.count
+    = fa_icon "retweet"
+    .guide-retweet リツイート
+    .count_retweets 3
+    = fa_icon "heart"
+    .guide-like いいね
+    .count_likes 3
+    = fa_icon "envelope"
+    .guide-message メッセージ
