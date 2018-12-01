@@ -1,0 +1,378 @@
+.comments__timeline__tweet__box {
+  width: 640px;
+  min-height: 100px;
+  padding-top: 10px;
+
+  .context-bar {
+    height: 22px;
+    width: 530px;
+    margin-left: 30px;
+    margin-top: 10px;
+
+    .fa-heart {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      margin-top: 2px;
+      margin-right: 5px;
+    }
+
+    .notification {
+      float: left;
+      color: $gray;
+      font-size: 11px;
+      margin-right: 5px;
+    }
+  }
+
+  .icon {
+    height: 48px;
+    width: 48px;
+    margin-top: 3px;
+    margin-left: 50px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .tweet-header {
+    height: 20px;
+    width: 500px;
+    margin-left: 100px;
+
+    .fullname {
+      height: 20px;
+      max-width: 100%;
+      float: left;
+      color: #14171a;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .username {
+      height: 20px;
+      float: left;
+      color: $gray;
+      font-size: 14px;
+      max-width: 100%;
+      margin-left: 10px;
+    }
+
+    .timestamp {
+      float: left;
+      height: 20px;
+      width: 60px;
+      color: $gray;
+      font-size: 14px;
+    }
+
+    .fa-caret-down {
+      float: right;
+      color: $gray;
+      font-size: 20px;
+      position: absolute;
+      padding-left: 200px;
+    }
+
+    .guide-other {
+      float: right;
+      height: 25px;
+      width: 50px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      right: 22%;
+      display: none;
+    }
+
+    .delete-menu {
+      height: 300px;
+      width: 240px;
+      min-width: 192px;
+      position: absolute;
+      top: 30%;
+      right: 5%;
+      z-index: 900;
+      padding: 10px 0;
+      margin: 2px 0 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      display: none;
+
+      &__share {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__copy {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__site {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__pintweet {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__delete {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+        text-decoration: none;
+
+        @include m-text-b();
+      }
+
+      &__moment {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+    }
+
+    .other-menu {
+      height: 300px;
+      width: 240px;
+      min-width: 192px;
+      position: absolute;
+      top: 30%;
+      right: 5%;
+      z-index: 900;
+      padding: 10px 0;
+      margin: 2px 0 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      display: none;
+
+      &__copy {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__site {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__mute {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__block {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__report {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+
+      &__moment {
+        height: 36px;
+        color: $gray;
+        font-size: 14px;
+        margin-top: 14px;
+        padding: 0 16px;
+
+        @include m-text-b();
+      }
+    }
+  }
+
+  .reply {
+    float: left;
+    height: 20px;
+    width: 500px;
+    font-size: 12px;
+    color: $gray;
+    margin-left: 100px;
+  }
+
+  .tweet-text {
+    clear: both;
+    width: 500px;
+    min-height: 35px;
+    font-size: 14px;
+    padding-left: 50px;
+  }
+
+  .item-footer {
+    height: 15px;
+    width: 590px;
+    font-size: 12px;
+    padding-left: 50px;
+
+    .fa-comment {
+      float: left;
+      color: $gray;
+      font-size: 14px;
+    }
+
+    .guide-comment {
+      float: left;
+      height: 25px;
+      width: 35px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 32%;
+      display: none;
+    }
+
+    .count_comments {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      padding-left: 14px;
+    }
+
+    .fa-retweet {
+      float: left;
+      color: $gray;
+      font-size: 14px;
+      padding-left: 48px;
+    }
+
+    .guide-retweet {
+      float: left;
+      height: 25px;
+      width: 65px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 39%;
+      display: none;
+    }
+
+    .count_retweets {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      padding-left: 14px;
+    }
+
+    .fa-heart {
+      float: left;
+      color: $gray;
+      font-size: 13px;
+      padding-top: 1px;
+      padding-left: 48px;
+    }
+
+    .guide-like {
+      float: left;
+      height: 25px;
+      width: 45px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 46%;
+      display: none;
+    }
+
+    .count_likes {
+      float: left;
+      color: $gray;
+      font-size: 12px;
+      padding-left: 14px;
+    }
+
+    .fa-envelope {
+      float: left;
+      color: $gray;
+      font-size: 13px;
+      padding-top: 1px;
+      padding-left: 48px;
+    }
+
+    .guide-message {
+      float: left;
+      height: 25px;
+      width: 70px;
+      background-color: black;
+      color: $white;
+      font-size: 12px;
+      border-radius: 5px;
+      padding-top: 4px;
+      padding-left: 8px;
+      position: absolute;
+      left: 51%;
+      display: none;
+    }
+  }
+}
