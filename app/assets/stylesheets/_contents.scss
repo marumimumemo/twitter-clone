@@ -11,7 +11,7 @@
     &__profile {
       height: 215px;
       width: 288px;
-      border: 1px solid #e6ecf0;
+      border: 1px solid $gray_line;
       background: $white;
       position: relative;
       margin-bottom: 10px;
@@ -55,14 +55,18 @@
           line-height: 25px;
           margin: -1px 0 -2px 0;
           text-decoration: none;
+
+          @include hover-b();
         }
 
         .user-name {
-          color: #66757f;
+          color: $gray;
           max-width: 100%;
           font-size: 12px;
           padding-right: 5px;
           text-decoration: none;
+
+          @include hover-b();
         }
       }
 
@@ -81,6 +85,8 @@
           color: $gray;
           font-size: 12px;
           line-height: 16px;
+
+          @include hover-c();
         }
 
         .tweets-count {
@@ -107,6 +113,8 @@
           color: $gray;
           font-size: 12px;
           line-height: 16px;
+
+          @include hover-c();
         }
 
         .following-count {
@@ -133,6 +141,8 @@
           color: $gray;
           font-size: 12px;
           line-height: 16px;
+
+          @include hover-c();
         }
 
         .followed-count {
@@ -149,7 +159,7 @@
       height: 400px;
       width: 258px;
       background-color: $white;
-      border: 1px solid #e6ecf0;
+      border: 1px solid $gray_line;
       line-height: inherit;
       padding: 15px;
 
@@ -169,6 +179,8 @@
         float: left;
         padding-top: 5px;
         padding-left: 5px;
+
+        @include hover-b();
       }
 
       .trend-item {
@@ -179,6 +191,8 @@
           font-size: 14px;
           font-weight: bold;
           color: $light_blue;
+
+          @include hover-b();
         }
 
         .count {
@@ -196,12 +210,12 @@
     margin-top: 1px;
     margin-left: 10px;
     background: $white;
-    border: 1px solid #e6ecf0;
+    border: 1px solid $gray_line;
 
     &__tweetbox__one {
       height: 58px;
       width: 590px;
-      background-color: #E8F5FD;
+      background-color: $water_blue;
 
       .icon {
         height: 32px;
@@ -226,7 +240,7 @@
         #tweet_body {
           font-size: 18px;
           width: 100%;
-          border: 1px solid #e6ecf0;
+          border: 1px solid $gray_line;
           border-radius: 5px;
         }
 
@@ -273,7 +287,7 @@
     &__tweetbox__two {
       height: 150px;
       width: 590px;
-      background-color: #E8F5FD;
+      background-color: $water_blue;
       display: none;
 
       .icon {
@@ -302,7 +316,7 @@
           width: 100%;
           padding-top: 10px;
           padding-left: 10px;
-          border: 1px solid #e6ecf0;
+          border: 1px solid $gray_line;
           border-radius: 5px;
         }
 
@@ -434,15 +448,17 @@
     &__new-tweets-bar {
       height: 22px;
       width: 588px;
-      background-color: #f5f8fa;
+      background-color: $gray_cloud;
       color: $light_blue;
       font-size: 14px;
-      border-bottom: 1px solid #e6ecf0;
-      border-top: 1px solid #e6ecf0;
+      border-bottom: 1px solid $gray_line;
+      border-top: 1px solid $gray_line;
       cursor: pointer;
       padding: 10px 1px;
       text-align: center;
       text-decoration: none;
+
+      @include hover-d();
     }
 
     &__tweet {
@@ -452,7 +468,7 @@
 
       &__box {
         min-height: 100px;
-        border-bottom: 1px solid #e6ecf0;
+        border-bottom: 1px solid $gray_line;
 
         .context-bar {
           height: 22px;
@@ -494,9 +510,11 @@
             height: 18px;
             max-width: 100%;
             float: left;
-            color: #14171a;
+            color: black;
             font-size: 14px;
             font-weight: bold;
+
+            @include hover-a();
           }
 
           .username {
@@ -512,6 +530,8 @@
             color: $gray;
             font-size: 14px;
             margin-left: 10px;
+
+            @include hover-a();
           }
 
           .fa-caret-down {
@@ -534,153 +554,176 @@
           }
 
           .delete-menu {
-            height: 300px;
+            height: 220px;
             width: 240px;
             min-width: 192px;
             position: absolute;
-            top: 30%;
             right: 5%;
             z-index: 900;
             padding: 10px 0;
             margin: 2px 0 0;
-            background: #fff;
+            background: $white;
             border-radius: 4px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.25);
             display: none;
 
             &__share {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
+              margin-top: 10px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__copy {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__site {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__pintweet {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__delete {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
               text-decoration: none;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__moment {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
           }
 
           .other-menu {
-            height: 300px;
+            height: 200px;
             width: 240px;
             min-width: 192px;
             position: absolute;
-            top: 30%;
             right: 5%;
             z-index: 900;
             padding: 10px 0;
             margin: 2px 0 0;
-            background: #fff;
+            background: $white;
             border-radius: 4px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.25);
             display: none;
 
             &__copy {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__site {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__mute {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__block {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__report {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
 
             &__moment {
-              height: 36px;
+              height: 30px;
               color: $gray;
               font-size: 14px;
-              margin-top: 14px;
               padding: 0 16px;
+              padding-top: 5px;
+
+              @include hover-e();
 
               @include m-text-b();
             }
@@ -828,7 +871,7 @@
       width: 258px;
       background-color: $white;
       background-clip: inherit;
-      border: 1px solid #e6ecf0;
+      border: 1px solid $gray_line;
       line-height: inherit;
       padding: 15px;
       margin-bottom: 10px;
@@ -849,6 +892,8 @@
         font-size: 12px;
         padding-top: 5px;
         padding-left: 5px;
+
+        @include hover-b();
       }
 
       .all-link {
@@ -857,12 +902,14 @@
         float: left;
         padding-top: 5px;
         padding-left: 5px;
+
+        @include hover-b();
       }
 
       .user-small-list-item {
         clear: both;
         min-height: 48px;
-        border-bottom: 1px solid #e6ecf0;
+        border-bottom: 1px solid $gray_line;
         padding-bottom: 8px;
         margin-top: 10px;
 
@@ -913,6 +960,8 @@
             font-weight: bold;
             position: relative;
             white-space: nowrap;
+
+            @include hover-f();
           }
         }
       }
@@ -922,7 +971,7 @@
       height: 173px;
       width: 258px;
       background-color: $white;
-      border: 1px solid #e6ecf0;
+      border: 1px solid $gray_line;
       padding: 15px;
 
       .item {
@@ -930,6 +979,8 @@
         padding-right: 8px;
         color: $gray;
         font-size: 11px;
+
+        @include hover-a();
       }
     }
   }

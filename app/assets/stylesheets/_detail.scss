@@ -1,7 +1,7 @@
 .detail__timeline__tweet__box {
   width: 640px;
   margin: 0 auto;
-  border: 1px solid #e6ecf0;
+  border: 1px solid $gray_line;
   padding-top: 60px;
 
   .context-bar {
@@ -49,9 +49,11 @@
         height: 24px;
         max-width: 100%;
         float: left;
-        color: #14171a;
+        color: black;
         font-size: 14px;
         font-weight: bold;
+
+        @include hover-a();
       }
 
       .username {
@@ -81,6 +83,8 @@
       padding: 6px 16px;
       text-align: center;
       white-space: nowrap;
+
+      @include hover-f();
     }
 
     .fa-caret-down {
@@ -105,153 +109,175 @@
     }
 
     .delete-menu {
-      height: 300px;
+      height: 220px;
       width: 240px;
       min-width: 192px;
       position: absolute;
-      top: 30%;
       right: 5%;
       z-index: 900;
       padding: 10px 0;
       margin: 2px 0 0;
-      background: #fff;
+      background: $white;
       border-radius: 4px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.25);
       display: none;
 
       &__share {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
         margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__copy {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__site {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__pintweet {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__delete {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
         text-decoration: none;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__moment {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
     }
 
     .other-menu {
-      height: 300px;
+      height: 220px;
       width: 240px;
       min-width: 192px;
       position: absolute;
-      top: 30%;
       right: 5%;
       z-index: 900;
       padding: 10px 0;
       margin: 2px 0 0;
-      background: #fff;
+      background: $white;
       border-radius: 4px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.25);
       display: none;
 
       &__copy {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__site {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__mute {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__block {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__report {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__moment {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
@@ -268,22 +294,22 @@
   .timestamp {
     width: 560px;
     font-size: 12px;
-    color: #657786;
+    color: $gray;
     line-height: 24px;
     margin-left: 50px;
-    border-bottom: 1px solid #e6ecf0;
+    border-bottom: 1px solid $gray_line;
   }
 
   .status {
     height: 48px;
     width: 560px;
     margin: 0 auto;
-    border-bottom: 1px solid #e6ecf0;
+    border-bottom: 1px solid $gray_line;
 
     .status-retweets {
       float: left;
       font-size: 12px;
-      color: #657786;
+      color: $gray;
       padding-top: 12px;
       padding-left: 12px;
       padding-right: 12px;
@@ -291,7 +317,7 @@
 
     .status-likes {
       font-size: 12px;
-      color: #657786;
+      color: $gray;
       float: left;
       padding-top: 12px;
     }
@@ -304,7 +330,7 @@
     padding-top: 12px;
     padding-left: 50px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #e6ecf0;
+    border-bottom: 1px solid $gray_line;
 
     .fa-comment {
       float: left;
@@ -421,7 +447,7 @@
   .detail__timeline__tweetbox__one {
     height: 58px;
     width: 640px;
-    border-bottom: 1px solid #e6ecf0;
+    border-bottom: 1px solid $gray_line;
 
     .icon {
       height: 32px;
@@ -445,12 +471,12 @@
       #comment_body {
         font-size: 14px;
         width: 100%;
-        border: 1px solid #e6ecf0;
+        border: 1px solid $gray_line;
         border-radius: 5px;
       }
 
       .text {
-        color: #657786;
+        color: $gray;
         position: absolute;
         top: 350px;
         padding-left: 10px;
@@ -482,7 +508,7 @@
     height: 150px;
     width: 640px;
     display: none;
-    border-bottom: 1px solid #e6ecf0;
+    border-bottom: 1px solid $gray_line;
 
     .icon {
       height: 32px;
@@ -510,7 +536,7 @@
         width: 100%;
         padding-top: 10px;
         padding-left: 10px;
-        border: 1px solid #e6ecf0;
+        border: 1px solid $gray_line;
         border-radius: 5px;
       }
 

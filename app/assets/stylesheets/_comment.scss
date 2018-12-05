@@ -40,16 +40,16 @@
     margin-left: 100px;
 
     .fullname {
-      height: 20px;
       max-width: 100%;
       float: left;
-      color: #14171a;
+      color: black;
       font-size: 14px;
       font-weight: bold;
+
+      @include hover-a();
     }
 
     .username {
-      height: 20px;
       float: left;
       color: $gray;
       font-size: 14px;
@@ -59,10 +59,11 @@
 
     .timestamp {
       float: left;
-      height: 20px;
       width: 60px;
       color: $gray;
       font-size: 14px;
+
+      @include hover-a();
     }
 
     .fa-caret-down {
@@ -89,153 +90,177 @@
     }
 
     .delete-menu {
-      height: 300px;
+      height: 220px;
       width: 240px;
       min-width: 192px;
       position: absolute;
-      top: 30%;
       right: 5%;
       z-index: 900;
       padding: 10px 0;
       margin: 2px 0 0;
-      background: #fff;
+      background: $white;
       border-radius: 4px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.25);
       display: none;
 
       &__share {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
+        margin-top: 10px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__copy {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__site {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__pintweet {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__delete {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
         text-decoration: none;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__moment {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
     }
 
     .other-menu {
-      height: 300px;
+      height: 290px;
       width: 240px;
       min-width: 192px;
       position: absolute;
-      top: 30%;
       right: 5%;
       z-index: 900;
       padding: 10px 0;
       margin: 2px 0 0;
-      background: #fff;
+      background: $white;
       border-radius: 4px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.25);
       display: none;
 
       &__copy {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
         margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__site {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__mute {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__block {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__report {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
 
       &__moment {
-        height: 36px;
+        height: 30px;
         color: $gray;
         font-size: 14px;
-        margin-top: 14px;
         padding: 0 16px;
+        padding-top: 5px;
+
+        @include hover-e();
 
         @include m-text-b();
       }
@@ -277,7 +302,6 @@
       width: 35px;
       background-color: black;
       color: $white;
-      font-size: 12px;
       border-radius: 5px;
       padding-top: 4px;
       padding-left: 8px;
@@ -289,7 +313,6 @@
     .count_comments {
       float: left;
       color: $gray;
-      font-size: 12px;
       padding-left: 14px;
     }
 
@@ -306,7 +329,6 @@
       width: 65px;
       background-color: black;
       color: $white;
-      font-size: 12px;
       border-radius: 5px;
       padding-top: 4px;
       padding-left: 8px;
@@ -336,7 +358,6 @@
       width: 45px;
       background-color: black;
       color: $white;
-      font-size: 12px;
       border-radius: 5px;
       padding-top: 4px;
       padding-left: 8px;
@@ -348,7 +369,6 @@
     .count_likes {
       float: left;
       color: $gray;
-      font-size: 12px;
       padding-left: 14px;
     }
 
@@ -366,7 +386,6 @@
       width: 70px;
       background-color: black;
       color: $white;
-      font-size: 12px;
       border-radius: 5px;
       padding-top: 4px;
       padding-left: 8px;

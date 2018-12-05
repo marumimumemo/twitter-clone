@@ -50,7 +50,7 @@
       width: 130px;
       margin-top: 25px;
       margin-left: 40px;
-      color: #66757f;
+      color: $gray;
       cursor: pointer;
       display: block;
     }
@@ -60,7 +60,7 @@
       width: 130px;
       margin-top: 10px;
       margin-left: 40px;
-      color: #66757f;
+      color: $gray;
       cursor: pointer;
     }
 
@@ -68,7 +68,7 @@
       height: 32px;
       width: 130px;
       margin: 10px 40px;
-      color: #66757f;
+      color: $gray;
       cursor: pointer;
     }
 
@@ -98,7 +98,6 @@
     height: 200px;
     width: 200px;
     cursor: pointer;
-    border-radius: 50%;
     box-sizing: border-box;
     top: 180px;
     left: 80px;
@@ -142,7 +141,7 @@
       .upload-two {
         height: 32px;
         width: 130px;
-        color: #66757f;
+        color: $gray;
         margin-top: 25px;
         margin-left: 40px;
         cursor: pointer;
@@ -152,7 +151,7 @@
       .delete-buttun {
         height: 32px;
         width: 130px;
-        color: #66757f;
+        color: $gray;
         cursor: pointer;
         margin-top: 10px;
         margin-left: 40px;
@@ -162,7 +161,7 @@
         height: 32px;
         width: 130px;
         margin: 10px 40px;
-        color: #66757f;
+        color: $gray;
         cursor: pointer;
       }
 
@@ -200,8 +199,8 @@
       margin-top: 10px;
       margin-right: 10px;
       background-color: $white;
-      border: 1px solid #66757f;
-      color: #66757f;
+      border: 1px solid $gray;
+      color: $gray;
       border-radius: 100px;
       box-shadow: none;
       cursor: pointer;
@@ -212,12 +211,14 @@
       text-align: center;
       white-space: nowrap;
       text-decoration: none;
+
+      @include hover-f();
     }
   }
 }
 
 .profile-edit {
-  background-color: #E8F5FD;
+  background-color: $water_blue;
   height: 400px;
   width: 270px;
   margin-left: 60px;
@@ -230,7 +231,7 @@
     width: 290px;
 
     .field {
-      color: #66757f;
+      color: $gray;
       font-weight: bold;
       font-size: 21px;
       line-height: 28px;
@@ -241,12 +242,12 @@
     }
 
     .birth {
-      color: #66757f;
+      color: $gray;
       font-size: 18px;
     }
 
     .text, #user_birthday_1i, #user_birthday_2i, #user_birthday_3i {
-      color: #66757f;
+      color: $gray;
       font-size: 14px;
       font-weight: normal;
     }
@@ -256,7 +257,7 @@
       width: 260px;
       font-size: 14px;
       line-height: 20px;
-      color: #1DA1F2;
+      color: $light_blue;
     }
 
     .save-buttun {
@@ -279,6 +280,8 @@
       right: 2%;
       text-align: center;
       white-space: nowrap;
+
+      @include hover-f();
     }
   }
 }

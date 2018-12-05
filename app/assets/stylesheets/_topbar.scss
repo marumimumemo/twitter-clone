@@ -42,6 +42,8 @@
           font-size: 17px;
           margin-top: 15px;
           float: left;
+
+          @include hover-a();
         }
       }
 
@@ -56,6 +58,8 @@
           font-size: 17px;
           margin-top: 15px;
           float: left;
+
+          @include hover-a();
         }
       }
     }
@@ -89,14 +93,14 @@
         .keyword {
           height: 32px;
           width: 94%;
-          background-color: #f5f8fa;
-          color: #14171a;
+          background-color: $gray_cloud;
+          color: $gray;
           font-size: 12px;
           line-height: 16px;
           margin-top: 10px;
           padding: 8px 32px 8px 12px;
           border-radius: 21px;
-          border: 1px solid #e6ecf0;
+          border: 1px solid $gray_line;
           box-sizing: border-box;
           display: block;
         }
@@ -110,6 +114,21 @@
         }
       }
 
+      .guide-menu{
+        height: 25px;
+        width: 120px;
+        position: absolute;
+        top: 46px;
+        right: 110px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        display: none;
+      }
+
       #navi {
         float: left;
         height: 32px;
@@ -121,7 +140,7 @@
 
         .menu {
           float: left;
-          height: 280px;
+          height: 240px;
           width: 200px;
           min-width: 192px;
           position: absolute;
@@ -130,7 +149,7 @@
           z-index: 900;
           padding: 10px 0;
           margin: 2px 0 0;
-          background: #fff;
+          background: $white;
           border-radius: 4px;
           box-shadow: 0 1px 4px rgba(0,0,0,0.25);
           display: none;
@@ -148,39 +167,42 @@
           }
 
           &__user-link {
-            height: 36px;
+            height: 30px;
             color: $gray;
             font-size: 14px;
-            line-height: 20px;
             padding: 0 16px;
+            padding-top: 4px;
+
+            @include hover-e();
+
+            @include m-text-a();
 
             .fa {
               float: left;
               color: $gray;
               font-size: 20px;
-              margin-top: 15px;
               margin-right: 10px;
             }
-
-            @include m-text-a();
 
           }
 
           &__list {
             clear: both;
-            height: 36px;
+            height: 30px;
             color: $gray;
             font-size: 14px;
             line-height: 20px;
             padding: 0 16px;
+            padding-top: 4px;
 
             .fa {
               float: left;
               color: $gray;
               font-size: 16px;
-              margin-top: 15px;
               margin-right: 5px;
             }
+
+            @include hover-e();
 
             @include m-text-a();
 
@@ -188,55 +210,62 @@
 
           &__moment {
             clear: both;
-            height: 36px;
+            height: 30px;
             color: $gray;
             font-size: 14px;
             line-height: 20px;
             padding: 0 16px;
+            padding-top: 4px;
 
             .fa {
               float: left;
               color: $gray;
               font-size: 20px;
-              margin-top: 15px;
               margin-right: 10px;
             }
+
+            @include hover-e();
 
             @include m-text-a();
 
           }
 
           &__setting {
-            height: 36px;
+            height: 30px;
             color: $gray;
             font-size: 14px;
-            margin-top: 14px;
             padding: 0 16px;
+            padding-top: 4px;
+
+            @include hover-e();
 
             @include m-text-b();
 
           }
 
           &__help-center {
-            height: 36px;
+            height: 30px;
             color: $gray;
             font-size: 14px;
-            line-height: 20px;
             padding: 0 16px;
+            padding-top: 4px;
+
+            @include hover-e();
 
             @include m-text-b();
 
           }
 
           &__logout {
-            height: 36px;
+            height: 30px;
             color: $gray;
             font-size: 14px;
-            line-height: 20px;
             padding: 0 16px;
+            padding-top: 4px;
+
+            @include hover-e();
 
             @include m-text-b();
-
           }
         }
       }
@@ -259,6 +288,8 @@
         padding: 6px 16px;
         text-align: center;
         white-space: nowrap;
+
+        @include hover-f();
       }
     }
   }

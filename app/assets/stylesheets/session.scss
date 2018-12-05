@@ -84,6 +84,8 @@
       float: left;
       width: 53px;
 
+      @include hover-f();
+
       .btn {
         margin-top: 20px;
         margin-left: 10px;
@@ -154,6 +156,8 @@
       text-align: center;
       white-space: nowrap;
 
+      @include hover-f();
+
       .btn {
         color: $white;
         text-decoration: none;
@@ -170,7 +174,7 @@
   background-color: $white;
   position: absolute;
   bottom: 0;
-  border-top: 1px solid #e6ecf0;
+  border-top: 1px solid $gray_line;
 
   .item {
     float: left;
@@ -181,5 +185,7 @@
     padding-right: 8px;
     font-size: 11px;
     cursor: pointer;
+
+    @include hover-b();
   }
 }
