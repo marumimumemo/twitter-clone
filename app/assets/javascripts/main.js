@@ -82,6 +82,12 @@ $(document).on('turbolinks:load', function() {
         $('.contents__timeline__tweetbox__two').hide();
     });
 
+    $('#navi').on("mouseover",function(){
+        $('.guide-menu').show();
+    }).on("mouseout", function(){
+      $(".guide-menu").hide();
+    });
+
     $('.fa-star').on("mouseover",function(){
         $('.guide-emoji').show();
     }).on("mouseout", function(){
