@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
   def create
     @comment = @tweet.comments.new(comment_params)
     if @comment.save
-      redirect_to tweet_path(@tweet.id), notice: "返信が投稿されました"
+      redirect_to tweet_path(@tweet.id), notice: "ツイートが投稿されました"
     else
-      render template: "tweets/show"
+      render template: "tweets/show" , alert: "投稿に失敗しました"
     end
   end
 
