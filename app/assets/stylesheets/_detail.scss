@@ -68,7 +68,7 @@
     .follow-buttun {
       height: 20px;
       width: 80px;
-      background-color: #4AB3F4;
+      background-color: $light_blue;
       color: $white;
       float: left;
       margin-top: 10px;
@@ -554,7 +554,7 @@
       .tweet-buttun {
         height: 30px;
         width: 60px;
-        background-color: #4AB3F4;
+        background-color: $light_blue;
         color: $white;
         float: right;
         margin-right: 10px;

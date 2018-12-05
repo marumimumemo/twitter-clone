@@ -335,7 +335,7 @@
         .tweet-buttun {
           height: 30px;
           width: 100px;
-          background-color: #4AB3F4;
+          background-color: $light_blue;
           color: $white;
           float: right;
           margin-right: 10px;
@@ -931,7 +931,7 @@
             width: 70px;
             float: left;
             padding-bottom: 5px;
-            color: #14171a;
+            color: black;
             font-size: 14px;
             font-weight: bold;
           }

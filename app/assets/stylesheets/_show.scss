@@ -247,7 +247,7 @@
       margin: 0 -6px 0 -8px;
       padding: 4px 7px;
       width: 100%;
-      border-color: #A4D9F9;
+      border-color: $water_blue;
 
       @include hover-b();
     }
@@ -259,7 +259,7 @@
         margin: 0 -6px 0 -8px;
         padding: 4px 7px;
         width: 100%;
-        border-color: #A4D9F9;
+        border-color: $water_blue;
     }
   }
 
@@ -675,7 +675,7 @@
             width: 70px;
             float: left;
             padding-bottom: 5px;
-            color: #14171a;
+            color: black;
             font-size: 14px;
             font-weight: bold;
           }
