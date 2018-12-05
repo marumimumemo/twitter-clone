@@ -13,10 +13,13 @@ class CommentsController < ApplicationController
   def destroy
     comment = Comment.find(params[:id])
     if comment.user_id == current_user.id
-      comment.destroy
-      redirect_to tweet_path(@tweet.id), notice: "ツイートが削除されました"
+      if comment.destroy
+        redirect_to tweet_path(@tweet.id), notice: "ツイートが削除されました"
+      else
+        render template: "tweets/show", alert: "削除に失敗しました"
+      end
     else
-      render template: "tweets/show", alert: "削除に失敗しました"
+      render template: "tweets/show"
     end
   end
 
