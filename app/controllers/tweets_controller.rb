@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
     if @tweet.save
       redirect_to root_path, notice: "ツイートが投稿されました"
     else
-      render :index
+      render :index, alert: "投稿に失敗しました"
     end
   end
 
@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
       tweet.destroy
       redirect_to root_path, notice: "ツイートが削除されました"
     else
-      render :index
+      render :index, alert: "削除に失敗しました"
     end
   end
 

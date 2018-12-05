@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
       comment.destroy
       redirect_to tweet_path(@tweet.id), notice: "ツイートが削除されました"
     else
-      render template: "tweets/show"
+      render template: "tweets/show", alert: "削除に失敗しました"
     end
   end
 
