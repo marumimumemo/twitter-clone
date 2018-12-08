@@ -97,3 +97,15 @@
     opacity:0.6;
   }
 }
+
+@mixin hover-g() {
+  &:hover {
+    color: $light_green;
+  }
+}
+
+@mixin hover-h() {
+  &:hover {
+    color: $red;
+  }
+}

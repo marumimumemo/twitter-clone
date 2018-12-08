@@ -336,6 +336,8 @@
       float: left;
       color: $gray;
       font-size: 14px;
+
+      @include hover-c();
     }
 
     .guide-comment {
@@ -366,6 +368,8 @@
       color: $gray;
       font-size: 14px;
       padding-left: 48px;
+
+      @include hover-g();
     }
 
     .guide-retweet {
@@ -396,6 +400,8 @@
       font-size: 13px;
       padding-top: 1px;
       padding-left: 48px;
+
+      @include hover-h();
     }
 
     .guide-like {
@@ -426,6 +432,8 @@
       font-size: 13px;
       padding-top: 1px;
       padding-left: 48px;
+
+      @include hover-c();
     }
 
     .guide-message {

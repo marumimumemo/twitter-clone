@@ -25,6 +25,7 @@
           %input.keyword(placeholder="キーワード検索" type="text")
           %label
         = fa_icon "search"
+      .guide-menu プロフィールと設定
       #navi
         = image_tag current_user.avatar_image.url(:thumb_a)
         .menu
@@ -60,23 +61,31 @@
 .mypage__bar
   .mypage__bar__main
     .tweets
+      .guide-tweets
+        = current_user.tweets.count.to_s + "ツイート"
       .tweets-label ツイート
-      .tweets-count 9,898
+      .tweets-count
+        = current_user.tweets.count
     .following
+      .guide-following 292人をフォロー中
       .following-label フォロー
-      .following-count 2,929
+      .following-count 292
     .followed
+      .guide-followed 356人のフォロワー
       .followed-label フォロワー
-      .followed-count 3,562
+      .followed-count 356
     .likes
+      .guide-likes 360いいね
       .likes-label いいね
-      .likes-count 3,562
+      .likes-count 360
     .lists
+      .guide-lists 278件のリスト
       .lists-label リスト
-      .lists-count 2,789
+      .lists-count 278
     .moments
+      .guide-moments 111個のモーメント
       .moments-label モーメント
-      .moments-count 1,112
+      .moments-count 111
   .edit__profile
     = link_to "プロフィールを編集", edit_user_path(current_user)
 .show__contents
@@ -105,7 +114,7 @@
       .all-link すべて見る
       .user-small-list-item
         %img.icon
-        .lists
+        .user-lists
           =render "tweets/recommend"
       .user-small-list-item
     .rightbar__show__recommend-trend

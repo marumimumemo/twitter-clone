@@ -58,10 +58,12 @@
 .contents
   .contents__leftbar
     .contents__leftbar__profile
-      .profile-bg
-        = image_tag current_user.header_image.url(:header_b)
-      .profile-icon-link
-        = image_tag current_user.avatar_image.url(:thumb_b)
+      = link_to user_path(current_user) do
+        .profile-bg
+          = image_tag current_user.header_image.url(:header_b)
+      = link_to user_path(current_user) do
+        .profile-icon-link
+          = image_tag current_user.avatar_image.url(:thumb_b)
       .user-field
         .name
           = link_to user_path(current_user) do
@@ -70,14 +72,20 @@
           = link_to user_path(current_user) do
             = current_user.username
       .tweets
-        .tweets-label ツイート
-        .tweets-count 9,898
+        = link_to user_path(current_user) do
+          .guide-tweets
+            = current_user.tweets.count.to_s + "ツイート"
+          .tweets-label ツイート
+          .tweets-count
+            = current_user.tweets.count
       .following
+        .guide-following 292人をフォロー中
         .following-label フォロー
-        .following-count 2,929
+        .following-count 292
       .followed
+        .guide-followed 356人のフォロワー
         .followed-label フォロワー
-        .followed-count 3,562
+        .followed-count 356
     .contents__leftbar__recommend-trend
       .trend-header おすすめトレンド
       .change-trends 変更する
@@ -132,7 +140,7 @@
       .all-link すべて見る
       .user-small-list-item
         %img.icon
-        .lists
+        .user-lists
           =render "recommend"
       .user-small-list-item
     .contents__rightbar__footer

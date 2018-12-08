@@ -54,7 +54,6 @@
           font-size: 18px;
           line-height: 25px;
           margin: -1px 0 -2px 0;
-          text-decoration: none;
 
           @include hover-b();
         }
@@ -78,6 +77,20 @@
         padding-top: 16px;
         padding-left: 16px;
         padding-bottom: 16px;
+
+        .guide-tweets{
+          height: 25px;
+          width: 70px;
+          background-color: black;
+          color: $white;
+          font-size: 12px;
+          border-radius: 5px;
+          padding-top: 4px;
+          padding-left: 8px;
+          top: 55%;
+          position: absolute;
+          display: none;
+        }
 
         .tweets-label {
           height: 16px;
@@ -107,6 +120,20 @@
         padding-left: 16px;
         padding-bottom: 16px;
 
+        .guide-following {
+          height: 25px;
+          width: 115px;
+          background-color: black;
+          color: $white;
+          font-size: 12px;
+          border-radius: 5px;
+          padding-top: 4px;
+          padding-left: 8px;
+          top: 55%;
+          position: absolute;
+          display: none;
+        }
+
         .following-label {
           height: 16px;
           width: 75px;
@@ -134,6 +161,20 @@
         padding-top: 16px;
         padding-left: 16px;
         padding-bottom: 16px;
+
+        .guide-followed {
+          height: 25px;
+          width: 120px;
+          background-color: black;
+          color: $white;
+          font-size: 12px;
+          border-radius: 5px;
+          padding-top: 4px;
+          padding-left: 8px;
+          top: 55%;
+          position: absolute;
+          display: none;
+        }
 
         .followed-label {
           height: 16px;
@@ -456,7 +497,6 @@
       cursor: pointer;
       padding: 10px 1px;
       text-align: center;
-      text-decoration: none;
 
       @include hover-d();
     }
@@ -749,6 +789,8 @@
             color: $gray;
             font-size: 14px;
             display: block;
+
+            @include hover-c();
           }
 
           .guide-comment {
@@ -778,6 +820,8 @@
             color: $gray;
             font-size: 14px;
             padding-left: 48px;
+
+            @include hover-g();
           }
 
           .guide-retweet {
@@ -808,6 +852,8 @@
             font-size: 13px;
             padding-top: 1px;
             padding-left: 48px;
+
+            @include hover-h();
           }
 
           .guide-like {
@@ -838,6 +884,8 @@
             font-size: 13px;
             padding-top: 1px;
             padding-left: 48px;
+
+            @include hover-c();
           }
 
           .guide-message {
@@ -920,7 +968,7 @@
           border-radius: 50%;
         }
 
-        .lists {
+        .user-lists {
           height: 48px;
           width: 180px;
           float: left;
@@ -934,6 +982,8 @@
             color: black;
             font-size: 14px;
             font-weight: bold;
+
+            @include hover-a();
           }
 
           .username {

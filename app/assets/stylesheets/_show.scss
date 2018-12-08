@@ -34,6 +34,20 @@
       padding-left: 16px;
       padding-bottom: 16px;
 
+      .guide-tweets{
+        height: 25px;
+        width: 70px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        top: 45%;
+        position: absolute;
+        display: none;
+      }
+
       .tweets-label {
         height: 16px;
         width: 75px;
@@ -61,6 +75,20 @@
       padding-top: 16px;
       padding-left: 16px;
       padding-bottom: 16px;
+
+      .guide-following {
+        height: 25px;
+        width: 115px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        top: 45%;
+        position: absolute;
+        display: none;
+      }
 
       .following-label {
         height: 16px;
@@ -90,6 +118,20 @@
       padding-left: 16px;
       padding-bottom: 16px;
 
+      .guide-followed {
+        height: 25px;
+        width: 120px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        top: 45%;
+        position: absolute;
+        display: none;
+      }
+
       .followed-label {
         height: 16px;
         width: 75px;
@@ -117,6 +159,20 @@
       padding-top: 16px;
       padding-left: 16px;
       padding-bottom: 16px;
+
+      .guide-likes {
+        height: 25px;
+        width: 70px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        top: 45%;
+        position: absolute;
+        display: none;
+      }
 
       .likes-label {
         height: 16px;
@@ -146,6 +202,20 @@
       padding-left: 16px;
       padding-bottom: 16px;
 
+      .guide-lists {
+        height: 25px;
+        width: 100px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        top: 45%;
+        position: absolute;
+        display: none;
+      }
+
       .lists-label {
         height: 16px;
         width: 75px;
@@ -173,6 +243,20 @@
       padding-top: 16px;
       padding-left: 16px;
       padding-bottom: 16px;
+
+      .guide-moments {
+        height: 25px;
+        width: 115px;
+        background-color: black;
+        color: $white;
+        font-size: 12px;
+        border-radius: 5px;
+        padding-top: 4px;
+        padding-left: 8px;
+        top: 45%;
+        position: absolute;
+        display: none;
+      }
 
       .moments-label {
         height: 16px;
@@ -664,7 +748,7 @@
           border-radius: 50%;
         }
 
-        .lists {
+        .user-lists {
           height: 48px;
           width: 180px;
           float: left;
@@ -678,6 +762,8 @@
             color: black;
             font-size: 14px;
             font-weight: bold;
+
+            @include hover-a();
           }
 
           .username {
