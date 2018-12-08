@@ -1,4 +1,4 @@
-.header__show {
+.header__show { 
   height: 280px;
   width: 100%;
   padding-top: 47px;
@@ -297,6 +297,25 @@
     text-decoration: none;
 
     @include hover-f();
+  }
+
+  .follow_buttun {
+    height: 20px;
+    width: 80px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 60px;
+    background-color: $white;
+    padding: 4px 12px;
+    color: $light_blue;
+    font-size: 12px;
+    border-color: $light_blue;
+    border: 1px solid $light_blue;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    text-decoration: none;
   }
 }
 

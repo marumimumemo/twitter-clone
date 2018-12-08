@@ -2,11 +2,13 @@
   .context-bar
     = fa_icon "heart"
     .notification 久保裕也さんがいいねしました
-  .icon
-    = image_tag comment.user.avatar_image.url(:thumb_d)
+  = link_to user_path(comment.user.id) do
+    .icon
+      = image_tag comment.user.avatar_image.url(:thumb_d)
   .tweet-header
-    .fullname
-      = comment.user.name
+    = link_to user_path(comment.user.id) do
+      .fullname
+        = comment.user.name
     .username
       = comment.user.username
     .timestamp

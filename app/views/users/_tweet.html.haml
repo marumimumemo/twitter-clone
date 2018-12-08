@@ -2,15 +2,18 @@
   .context-bar
     = fa_icon "heart"
     .notification 久保裕也さんがいいねしました
-  .icon
-    = image_tag tweet.user.avatar_image.url(:thumb_d)
+  = link_to user_path(tweet.user.id) do
+    .icon
+      = image_tag tweet.user.avatar_image.url(:thumb_d)
   .tweet-header
-    .fullname
-      = tweet.user.name
+    = link_to user_path(tweet.user.id) do
+      .fullname
+        = tweet.user.name
     .username
       = tweet.user.username
-    .timestamp
-      = time_ago_in_words(tweet.created_at)
+    = link_to tweet_path(tweet.id) do
+      .timestamp
+        = time_ago_in_words(tweet.created_at)
     = fa_icon "caret-down"
     .guide-other その他
     - if current_user.id == tweet.user_id
