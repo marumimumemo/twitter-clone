@@ -32,7 +32,7 @@
           =tweet.user.name + "さんをブロック"
         .other-menu__report ツイートを報告する
         .other-menu__moment モーメントに追加
-  = link_to tweet_path(tweet.id), method: :get do
+  = link_to tweet_path(tweet.id) do
     .tweet-text
       .body
       = tweet.body
@@ -42,7 +42,7 @@
   .item-footer
     = fa_icon "comment"
     .guide-comment 返信
-    = link_to tweet_path(tweet.id), method: :get do
+    = link_to tweet_path(tweet.id) do
       .count_comments
         = tweet.comments.count
     = fa_icon "retweet"
