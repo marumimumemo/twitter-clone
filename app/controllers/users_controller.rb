@@ -12,8 +12,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find(params[:id])
-    @tweets = user.tweets.order("created_at DESC")
+    @user = User.find(params[:id])
+    @tweets = @user.tweets.order("created_at DESC")
   end
 
   private
