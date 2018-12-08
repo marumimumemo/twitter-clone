@@ -2,16 +2,20 @@
   .context-bar
     = fa_icon "heart"
     .notification 久保裕也さんがいいねしました
-  .icon
-    = image_tag tweet.user.avatar_image.url(:thumb_d)
+  = link_to user_path(tweet.user.id) do
+    .icon
+      = image_tag tweet.user.avatar_image.url(:thumb_d)
   .tweet-header
-    .fullname
-      = tweet.user.name
+    = link_to user_path(tweet.user.id) do
+      .fullname
+        = tweet.user.name
     .username
       = tweet.user.username
-    .timestamp
-      = time_ago_in_words(tweet.created_at)
+    = link_to tweet_path(tweet.id) do
+      .timestamp
+        = time_ago_in_words(tweet.created_at)
     = fa_icon "caret-down"
+    .guide-other その他
     - if current_user.id == tweet.user_id
       .delete-menu
         .delete-menu__share ダイレクトメッセージで共有
@@ -25,28 +29,30 @@
       .other-menu
         .other-menu__copy ツイートへのリンクをコピー
         .other-menu__site ツイートをサイトに埋め込む
-        .other-menu__mute さんをミュート
-        .other-menu__block さんをブロック
+        .other-menu__mute
+          =tweet.user.name + "さんをミュート"
+        .other-menu__block
+          =tweet.user.name + "さんをブロック"
         .other-menu__report ツイートを報告する
         .other-menu__moment モーメントに追加
-  = link_to tweet_path(tweet.id), method: :get do
+  = link_to tweet_path(tweet.id) do
     .tweet-text
       .body
       = tweet.body
       .image
       - tweet.images.each do |a|
         = image_tag a.image.url(:tweet_image)
-  .guide
-    .guide-comment 返信
-    .guide-retweet リツイート
-    .guide-like いいね
-    .guide-message メッセージ
-    .guide-other その他
   .item-footer
     = fa_icon "comment"
-    .count 3
+    .guide-comment 返信
+    = link_to tweet_path(tweet.id) do
+      .count_comments
+        = tweet.comments.count
     = fa_icon "retweet"
-    .count 3
+    .guide-retweet リツイート
+    .count_retweets 3
     = fa_icon "heart"
-    .count 3
+    .guide-like いいね
+    .count_likes 3
     = fa_icon "envelope"
+    .guide-message メッセージ

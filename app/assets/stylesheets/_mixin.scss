@@ -6,6 +6,11 @@
     font-weight: bold;
     margin-left: 3px;
     margin-top: 17px;
+
+    &:hover {
+      color: $light_blue;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -15,32 +20,92 @@
     font-size: 20px;
     margin-top: 15px;
     float: left;
-  }
-}
 
-@mixin count() {
-  .count {
-    float: left;
-    color: $gray;
-    font-size: 12px;
-    padding-left: 14px;
+    &:hover {
+      color: $light_blue;
+      text-decoration: underline;
+    }
   }
 }
 
 @mixin m-text-a() {
   .m-text-a {
     float: left;
-    margin-top: 15px;
+    height: 30px;
+    width: 145px;
     cursor: pointer;
-    color: #14171a;
+    color: black;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
 
 @mixin m-text-b() {
   .m-text-b {
     float: left;
+    height: 30px;
+    width: 160px;
     cursor: pointer;
-    color: #14171a;
+    color: black;
     text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+@mixin hover-a() {
+  &:hover {
+    color: $light_blue;
+    text-decoration: underline;
+  }
+}
+
+@mixin hover-b() {
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+@mixin hover-c() {
+  &:hover {
+    color: $light_blue;
+  }
+}
+
+@mixin hover-d() {
+  &:hover{
+    background-color: $gray_line;
+  }
+}
+
+@mixin hover-e() {
+  &:hover {
+    color: $white;
+    background-color: $light_blue;
+  }
+}
+
+@mixin hover-f() {
+  &:hover {
+    filter: alpha(opacity=60);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
+}
+
+@mixin hover-g() {
+  &:hover {
+    color: $light_green;
+  }
+}
+
+@mixin hover-h() {
+  &:hover {
+    color: $red;
   }
 }

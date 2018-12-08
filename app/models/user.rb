@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   before_create :create_username
   attr_accessor :login
   has_many :tweets
+  has_many :comments
   has_many :images, through: :tweets
 
   def self.new_username

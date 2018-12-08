@@ -84,6 +84,8 @@
       float: left;
       width: 53px;
 
+      @include hover-f();
+
       .btn {
         margin-top: 20px;
         margin-left: 10px;
@@ -110,7 +112,7 @@
       right: 67%;
 
       .btn {
-        color: #aab8c2;
+        color: $gray;
         font-size: 14px;
         text-decoration: none;
       }
@@ -154,6 +156,8 @@
       text-align: center;
       white-space: nowrap;
 
+      @include hover-f();
+
       .btn {
         color: $white;
         text-decoration: none;
@@ -170,16 +174,18 @@
   background-color: $white;
   position: absolute;
   bottom: 0;
-  border-top: 1px solid #e6ecf0;
+  border-top: 1px solid $gray_line;
 
   .item {
     float: left;
-    color: #aab8c2;
+    color: $gray;
     background: transparent;
     padding-top: 8px;
     padding-left: 15px;
     padding-right: 8px;
     font-size: 11px;
     cursor: pointer;
+
+    @include hover-b();
   }
 }

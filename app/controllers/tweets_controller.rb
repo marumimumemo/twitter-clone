@@ -11,19 +11,25 @@ class TweetsController < ApplicationController
     if @tweet.save
       redirect_to root_path, notice: "ツイートが投稿されました"
     else
-      render :index
+      render :index, alert: "投稿に失敗しました"
     end
   end
 
   def show
     @tweet = Tweet.find(params[:id])
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user).order("created_at ASC")
+    4.times { @comment.images.build }
   end
 
   def destroy
     tweet = Tweet.find(params[:id])
     if tweet.user_id == current_user.id
-      tweet.destroy
-      redirect_to root_path, notice: "ツイートが削除されました"
+      if tweet.destroy
+        redirect_to root_path, notice: "ツイートが削除されました"
+      else
+        render :index, alert: "削除に失敗しました"
+      end
     else
       render :index
     end

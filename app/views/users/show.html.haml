@@ -18,14 +18,14 @@
           = fa_icon "envelope"
           .text メッセージ
     .bird-icon
-      = link_to "#" do
-        = fa_icon "twitter"
+      = fa_icon "twitter"
     .topbar__navigation__right
       .search
         %form.search
           %input.keyword(placeholder="キーワード検索" type="text")
           %label
         = fa_icon "search"
+      .guide-menu プロフィールと設定
       #navi
         = image_tag current_user.avatar_image.url(:thumb_a)
         .menu
@@ -55,43 +55,54 @@
             = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'm-text-b'
       .tweet-buttun ツイート
 .header__show
-  = image_tag current_user.header_image.url(:header_a)
+  = image_tag @user.header_image.url(:header_a)
 .avatar__show
-  = image_tag current_user.avatar_image.url(:thumb_c)
+  = image_tag @user.avatar_image.url(:thumb_c)
 .mypage__bar
   .mypage__bar__main
     .tweets
+      .guide-tweets
+        = @user.tweets.count.to_s + "ツイート"
       .tweets-label ツイート
-      .tweets-count 9,898
+      .tweets-count
+        = @user.tweets.count
     .following
+      .guide-following 292人をフォロー中
       .following-label フォロー
-      .following-count 2,929
+      .following-count 292
     .followed
+      .guide-followed 356人のフォロワー
       .followed-label フォロワー
-      .followed-count 3,562
+      .followed-count 356
     .likes
+      .guide-likes 360いいね
       .likes-label いいね
-      .likes-count 3,562
+      .likes-count 360
     .lists
+      .guide-lists 278件のリスト
       .lists-label リスト
-      .lists-count 2,789
+      .lists-count 278
     .moments
+      .guide-moments 111個のモーメント
       .moments-label モーメント
-      .moments-count 1,112
-  .edit__profile
-    = link_to "プロフィールを編集", edit_user_path(current_user)
+      .moments-count 111
+  - if current_user.id == @user.id
+    .edit__profile
+      = link_to "プロフィールを編集", edit_user_path(current_user)
+  - else
+    .follow_buttun フォローする
 .show__contents
   .profile__box
     .profile__box__name
-      = current_user.name
+      = @user.name
     .profile__box__user-name
-      = current_user.username
+      = @user.username
     .profile__box__text
-      = current_user.profile
+      = @user.profile
     .profile__box__url
-      = current_user.url
+      = @user.url
     .profile__box__address
-      = current_user.address
+      = @user.address
   .show__timeline
     .show__timeline__bar
       .show__timeline__bar__tweets ツイート
@@ -106,7 +117,7 @@
       .all-link すべて見る
       .user-small-list-item
         %img.icon
-        .lists
+        .user-lists
           =render "tweets/recommend"
       .user-small-list-item
     .rightbar__show__recommend-trend

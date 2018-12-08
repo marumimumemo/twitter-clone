@@ -10,7 +10,7 @@
     padding-top: 6px;
     position: absolute;
     z-index: 100;
-    border: 1px solid #e6ecf0;
+    border: 1px solid $gray_line;
     -webkit-animation: cssAnimation 0s ease-in 1s forwards;
   }
 
@@ -25,7 +25,7 @@
     left: 26%;
     position: absolute;
     z-index: 100;
-    border: 1px solid #e6ecf0;
+    border: 1px solid $gray_line;
     -webkit-animation: cssAnimation 0s ease-in 1s forwards;
   }
 }

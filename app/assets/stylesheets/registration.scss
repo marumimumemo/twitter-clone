@@ -47,7 +47,7 @@
       }
 
       .upload {
-        color: #66757f;
+        color: $gray;
       }
 
       .hidden {
@@ -74,12 +74,13 @@
     }
 
     .actions {
+      @include hover-f();
 
       .btn {
         height: 47px;
         width: 510px;
         margin-top: 12px;
-        background-color: #4AB3F4;
+        background-color: $light_blue;
         color: $white;
         border-radius: 80px;
         box-shadow: none;
