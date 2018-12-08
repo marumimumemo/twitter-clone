@@ -55,17 +55,17 @@
             = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'm-text-b'
       .tweet-buttun ツイート
 .header__show
-  = image_tag current_user.header_image.url(:header_a)
+  = image_tag @user.header_image.url(:header_a)
 .avatar__show
-  = image_tag current_user.avatar_image.url(:thumb_c)
+  = image_tag @user.avatar_image.url(:thumb_c)
 .mypage__bar
   .mypage__bar__main
     .tweets
       .guide-tweets
-        = current_user.tweets.count.to_s + "ツイート"
+        = @user.tweets.count.to_s + "ツイート"
       .tweets-label ツイート
       .tweets-count
-        = current_user.tweets.count
+        = @user.tweets.count
     .following
       .guide-following 292人をフォロー中
       .following-label フォロー
@@ -86,20 +86,23 @@
       .guide-moments 111個のモーメント
       .moments-label モーメント
       .moments-count 111
-  .edit__profile
-    = link_to "プロフィールを編集", edit_user_path(current_user)
+  - if current_user.id == @user.id
+    .edit__profile
+      = link_to "プロフィールを編集", edit_user_path(current_user)
+  - else
+    .follow_buttun フォローする
 .show__contents
   .profile__box
     .profile__box__name
-      = current_user.name
+      = @user.name
     .profile__box__user-name
-      = current_user.username
+      = @user.username
     .profile__box__text
-      = current_user.profile
+      = @user.profile
     .profile__box__url
-      = current_user.url
+      = @user.url
     .profile__box__address
-      = current_user.address
+      = @user.address
   .show__timeline
     .show__timeline__bar
       .show__timeline__bar__tweets ツイート
