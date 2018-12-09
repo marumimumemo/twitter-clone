@@ -173,6 +173,18 @@ $(document).on('turbolinks:load', function() {
       $(this).siblings(".guide-retweet").hide();
     });
 
+    $('.red_heart').on("mouseover",function(){
+        $(this).siblings('.guide-like').show();
+    }).on("mouseout", function(){
+      $(this).siblings(".guide-like").hide();
+    });
+
+    $('.gray_heart').on("mouseover",function(){
+        $(this).siblings('.guide-like').show();
+    }).on("mouseout", function(){
+      $(this).siblings(".guide-like").hide();
+    });
+
     $('.fa-heart').on("mouseover",function(){
         $(this).siblings('.guide-like').show();
     }).on("mouseout", function(){

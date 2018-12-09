@@ -846,7 +846,7 @@
             padding-left: 14px;
           }
 
-          .fa-heart {
+          .gray_heart {
             float: left;
             color: $gray;
             font-size: 13px;
@@ -854,6 +854,14 @@
             padding-left: 48px;
 
             @include hover-h();
+          }
+
+          .red_heart {
+            float: left;
+            color: $red;
+            font-size: 13px;
+            padding-top: 1px;
+            padding-left: 48px;
           }
 
           .guide-like {
