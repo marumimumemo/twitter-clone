@@ -1,6 +1,7 @@
 .contents__timeline__tweet__box
   .context-bar
-    = fa_icon "heart"
+    -if tweet.likes.present?
+      = fa_icon "heart"
     .notification
       - tweet.likes.each do |likes|
         = likes.user.name + "さんがいいねしました"
@@ -32,9 +33,9 @@
         .other-menu__copy ツイートへのリンクをコピー
         .other-menu__site ツイートをサイトに埋め込む
         .other-menu__mute
-          =tweet.user.name + "さんをミュート"
+          = tweet.user.name + "さんをミュート"
         .other-menu__block
-          =tweet.user.name + "さんをブロック"
+          = tweet.user.name + "さんをブロック"
         .other-menu__report ツイートを報告する
         .other-menu__moment モーメントに追加
   = link_to tweet_path(tweet.id) do

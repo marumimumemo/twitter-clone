@@ -56,7 +56,8 @@
       .tweet-buttun ツイート
 .detail__timeline__tweet__box
   .context-bar
-    = fa_icon "heart"
+    -if @tweet.likes.present?
+      = fa_icon "heart"
     .notification
       - @tweet.likes.each do |likes|
         = likes.user.name + "さんがいいねしました"
