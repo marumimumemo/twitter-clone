@@ -1,7 +1,6 @@
 .comments__timeline__tweet__box
   .context-bar
-    = fa_icon "heart"
-    .notification 久保裕也さんがいいねしました
+    .notification
   = link_to user_path(comment.user.id) do
     .icon
       = image_tag comment.user.avatar_image.url(:thumb_d)
@@ -43,14 +42,14 @@
   .item-footer
     = fa_icon "comment"
     .guide-comment 返信
-    = link_to tweet_path(@tweet.id), method: :get do
+    = link_to tweet_path(@tweet.id) do
       .count_comments
         = @tweet.comments.count
     = fa_icon "retweet"
     .guide-retweet リツイート
-    .count_retweets 3
+    .count_retweets 0
     = fa_icon "heart"
     .guide-like いいね
-    .count_likes 3
+    .count_likes 0
     = fa_icon "envelope"
     .guide-message メッセージ

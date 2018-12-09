@@ -75,9 +75,11 @@
       .followed-label フォロワー
       .followed-count 356
     .likes
-      .guide-likes 360いいね
+      .guide-likes
+        = @user.likes.count.to_s + "いいね"
       .likes-label いいね
-      .likes-count 360
+      .likes-count
+        = @user.likes.count
     .lists
       .guide-lists 278件のリスト
       .lists-label リスト
