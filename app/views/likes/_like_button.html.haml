@@ -1,11 +1,11 @@
 - if tweet.like_user(current_user.id)
-  = link_to "/tweets/#{tweet.id}/likes/like.id", method: :delete, id: "like-button", remote: true do
+  = link_to tweet_like_path(tweet.id, current_user), method: :delete, id: "like-button", remote: true do
     = fa_icon "heart", class: "red_heart"
     .guide-like いいね
   .count_likes
     = tweet.likes_count
 - else
-  = link_to tweet_likes_path(tweet_id: tweet.id), method: :post, id: "like-button", remote: true do
+  = link_to tweet_likes_path(tweet.id), method: :post, id: "like-button", remote: true do
     = fa_icon "heart", class: "gray_heart"
     .guide-like いいね
   .count_likes
