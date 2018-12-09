@@ -1,7 +1,9 @@
 .contents__timeline__tweet__box
   .context-bar
     = fa_icon "heart"
-    .notification 久保裕也さんがいいねしました
+    .notification
+      - tweet.likes.each do |likes|
+        = likes.user.name + "さんがいいねしました"
   = link_to user_path(tweet.user.id) do
     .icon
       = image_tag tweet.user.avatar_image.url(:thumb_d)
@@ -30,9 +32,9 @@
         .other-menu__copy ツイートへのリンクをコピー
         .other-menu__site ツイートをサイトに埋め込む
         .other-menu__mute
-          =tweet.user.name + "さんをミュート"
+          = tweet.user.name + "さんをミュート"
         .other-menu__block
-          =tweet.user.name + "さんをブロック"
+          = tweet.user.name + "さんをブロック"
         .other-menu__report ツイートを報告する
         .other-menu__moment モーメントに追加
   = link_to tweet_path(tweet.id) do
@@ -50,9 +52,7 @@
         = tweet.comments.count
     = fa_icon "retweet"
     .guide-retweet リツイート
-    .count_retweets 3
-    = fa_icon "heart"
-    .guide-like いいね
-    .count_likes 3
+    .count_retweets 0
+    = render "likes/like_button", {tweet: tweet, likes: @likes}
     = fa_icon "envelope"
     .guide-message メッセージ
