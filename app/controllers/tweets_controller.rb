@@ -4,7 +4,6 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
     @tweets = Tweet.includes(:user).order("created_at DESC")
     4.times { @tweet.images.build }
-    @likes = Like.all.includes(:user)
   end
 
   def create
@@ -21,7 +20,6 @@ class TweetsController < ApplicationController
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user).order("created_at ASC")
     4.times { @comment.images.build }
-    @likes = Like.all.includes(:user)
   end
 
   def destroy
