@@ -111,7 +111,8 @@
     = fa_icon "retweet"
     .guide-retweet リツイート
     .count_retweets 0
-    = render "likes/like_button", {tweet: @tweet, likes: @likes}
+    .like_button{id: "like_button_#{@tweet.id}"}
+      = render "likes/like", {tweet: @tweet}
     = fa_icon "envelope"
     .guide-message メッセージ
   .detail__timeline__tweetbox__one
