@@ -9,8 +9,7 @@
         = f.label :header_image, class: 'upload-one' do
           画像のアップロード
           = f.file_field :header_image, class: 'hidden'
-        .delete-buttun 削除
-        .cancel キャンセル
+        = link_to "キャンセル", edit_user_path(current_user), class: 'cancel'
         .actions
           = f.submit "画像を変更", class: 'save-buttun-one'
   .edit__avatar
@@ -23,8 +22,7 @@
           = f.label :avatar_image, class: 'upload-two' do
             画像をアップロード
             = f.file_field :avatar_image, class: 'hidden'
-          .delete-buttun 削除
-          .cancel キャンセル
+          = link_to "キャンセル", edit_user_path(current_user), class: 'cancel'
           .actions
             = f.submit "画像を変更", class: 'save-buttun-two'
   .bottom

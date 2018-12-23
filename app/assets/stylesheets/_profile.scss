@@ -1,4 +1,4 @@
-.header {
+.header { 
   height: 340px;
   width: 100%;
   background-color: $light_blue;
@@ -55,21 +55,13 @@
       display: block;
     }
 
-    .delete-buttun {
-      height: 32px;
-      width: 130px;
-      margin-top: 10px;
-      margin-left: 40px;
-      color: $gray;
-      cursor: pointer;
-    }
-
     .cancel {
       height: 32px;
       width: 130px;
       margin: 10px 40px;
       color: $gray;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .save-buttun-one {
@@ -123,7 +115,7 @@
     }
 
     .image-menu-two {
-      height: 200px;
+      height: 130px;
       width: 220px;
       background: $white;
       border-radius: 4px;
@@ -147,21 +139,13 @@
         display: block;
       }
 
-      .delete-buttun {
-        height: 32px;
-        width: 130px;
-        color: $gray;
-        cursor: pointer;
-        margin-top: 10px;
-        margin-left: 40px;
-      }
-
       .cancel {
         height: 32px;
         width: 130px;
         margin: 10px 40px;
         color: $gray;
         cursor: pointer;
+        text-decoration: none;
       }
 
       .save-buttun-two {
