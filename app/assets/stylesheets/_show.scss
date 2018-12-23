@@ -294,6 +294,7 @@
     cursor: pointer;
     font-weight: bold;
     white-space: nowrap;
+    display: block;
     text-decoration: none;
 
     @include hover-f();

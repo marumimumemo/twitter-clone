@@ -51,6 +51,7 @@
         font-weight: bold;
 
         .name {
+          color: black;
           font-size: 18px;
           line-height: 25px;
           margin: -1px 0 -2px 0;
@@ -99,6 +100,7 @@
           color: $gray;
           font-size: 12px;
           line-height: 16px;
+          display: block;
           text-decoration: none;
 
           @include hover-c();
@@ -110,6 +112,7 @@
           color: $light_blue;
           font-size: 16px;
           padding-top: 3px;
+          display: block;
           text-decoration: none;
         }
       }
@@ -494,6 +497,7 @@
       cursor: pointer;
       padding: 10px 1px;
       text-align: center;
+      display: block;
       text-decoration: none;
 
       @include hover-d();
@@ -660,6 +664,7 @@
               font-size: 14px;
               padding: 0 16px;
               padding-top: 5px;
+              display: block;
               text-decoration: none;
 
               @include hover-e();
@@ -773,7 +778,12 @@
           min-height: 35px;
           font-size: 14px;
           padding-left: 60px;
+          display: block;
           text-decoration: none;
+
+          .body {
+            color: black;
+          }
         }
 
         .item-footer {
