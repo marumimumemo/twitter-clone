@@ -34,8 +34,7 @@
       .moments-label モーメント
       .moments-count 111
   - if current_user.id == @user.id
-    .edit__profile
-      = link_to "プロフィールを編集", edit_user_path(current_user)
+    = link_to "プロフィールを編集", edit_user_path(current_user), class:'edit__profile'
   - else
     .follow_buttun フォローする
 .show__contents

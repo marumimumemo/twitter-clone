@@ -20,8 +20,7 @@
         .delete-menu__copy ツイートへのリンクをコピー
         .delete-menu__site ツイートをサイトに埋め込む
         .delete-menu__pintweet プロフィールを固定表示しない
-        .delete-menu__delete
-          = link_to 'ツイートを削除', tweet_comment_path(@tweet.id, comment.id), method: :delete, data: {confirm: "このツイートを本当に削除しますか?"}
+        = link_to 'ツイートを削除', tweet_comment_path(@tweet.id, comment.id), class:'delete-menu__delete', method: :delete, data: {confirm: "このツイートを本当に削除しますか?"}
         .delete-menu__moment モーメントに追加
     - else
       .other-menu
