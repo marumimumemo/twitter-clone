@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181125070904) do
+ActiveRecord::Schema.define(version: 20181209075319) do
 
   create_table "comments", force: :cascade do |t|
     t.datetime "created_at",               null: false
@@ -35,11 +35,22 @@ ActiveRecord::Schema.define(version: 20181125070904) do
   add_index "images", ["comment_id"], name: "index_images_on_comment_id", using: :btree
   add_index "images", ["tweet_id"], name: "index_images_on_tweet_id", using: :btree
 
+  create_table "likes", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "user_id",    limit: 4, null: false
+    t.integer  "tweet_id",   limit: 4
+  end
+
+  add_index "likes", ["tweet_id"], name: "index_likes_on_tweet_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
+
   create_table "tweets", force: :cascade do |t|
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.text     "body",       limit: 65535, null: false
-    t.integer  "user_id",    limit: 4,     null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.text     "body",        limit: 65535, null: false
+    t.integer  "user_id",     limit: 4,     null: false
+    t.integer  "likes_count", limit: 4
   end
 
   add_index "tweets", ["user_id"], name: "index_tweets_on_user_id", using: :btree
@@ -74,5 +85,7 @@ ActiveRecord::Schema.define(version: 20181125070904) do
   add_foreign_key "comments", "users"
   add_foreign_key "images", "comments"
   add_foreign_key "images", "tweets"
+  add_foreign_key "likes", "tweets"
+  add_foreign_key "likes", "users"
   add_foreign_key "tweets", "users"
 end

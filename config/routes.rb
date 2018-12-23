@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :tweets, only: [:create, :destroy, :show] do
     resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
   resources :users, only: [:edit, :update, :destroy, :show]
   resources :images

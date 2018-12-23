@@ -1,63 +1,11 @@
-.topbar
-  .topbar__navigation
-    .topbar__navigation__left
-      .home
-        = link_to root_path do
-          = fa_icon "home"
-          .text ホーム
-      .moment
-        = link_to "#" do
-          = fa_icon "bolt"
-          .text モーメント
-      .notification
-        = link_to "#" do
-          = fa_icon "bell"
-          .text 通知
-      .message
-        = link_to "#" do
-          = fa_icon "envelope"
-          .text メッセージ
-    .bird-icon
-      = fa_icon "twitter"
-    .topbar__navigation__right
-      .search
-        %form.search
-          %input.keyword(placeholder="キーワード検索" type="text")
-          %label
-        = fa_icon "search"
-      .guide-menu プロフィールと設定
-      #navi
-        = image_tag current_user.avatar_image.url(:thumb_a)
-        .menu
-          .menu__name
-            = current_user.name
-          .menu__user-name
-            = current_user.username
-          .menu__user-link
-            = link_to edit_user_path(current_user) do
-              = fa_icon "male"
-              .m-text-a プロフィール
-          .menu__list
-            = link_to "#" do
-              = fa_icon "list"
-              .m-text-a リスト
-          .menu__moment
-            = link_to "#" do
-              = fa_icon "bolt"
-              .m-text-a モーメント
-          .menu__setting
-            = link_to "#" do
-              .m-text-b 設定とプライバシー
-          .menu__help-center
-            = link_to "#" do
-              .m-text-b ヘルプセンター
-          .menu__logout
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'm-text-b'
-      .tweet-buttun ツイート
+= render "shared/topbar"
 .detail__timeline__tweet__box
   .context-bar
-    = fa_icon "heart"
-    .notification 久保裕也さんがいいねしました
+    -if @tweet.likes.present?
+      = fa_icon "heart"
+    .notification
+      - @tweet.likes.each do |likes|
+        = likes.user.name + "さんがいいねしました"
   .tweet-header
     = link_to user_path(@tweet.user.id) do
       .icon
@@ -77,8 +25,7 @@
         .delete-menu__copy ツイートへのリンクをコピー
         .delete-menu__site ツイートをサイトに埋め込む
         .delete-menu__pintweet プロフィールを固定表示しない
-        .delete-menu__delete
-          = link_to 'ツイートを削除', tweet_path(@tweet.id), method: :delete, data: {confirm: "このツイートを本当に削除しますか?"}
+        = link_to 'ツイートを削除', tweet_path(@tweet.id), class:'delete-menu__delete', method: :delete, data: {confirm: "このツイートを本当に削除しますか?"}
         .delete-menu__moment モーメントに追加
     - else
       .other-menu
@@ -97,8 +44,9 @@
   .timestamp
     = @tweet.created_at
   .status
-    .status-retweets 3件のリツイート
-    .status-likes 6件のいいね
+    .status-retweets 0件のリツイート
+    .status-likes
+      = @tweet.likes_count.to_s + "件のいいね"
   .item-footer
     = fa_icon "comment"
     .guide-comment 返信
@@ -106,10 +54,9 @@
       = @tweet.comments.count
     = fa_icon "retweet"
     .guide-retweet リツイート
-    .count_retweets 3
-    = fa_icon "heart"
-    .guide-like いいね
-    .count_likes 3
+    .count_retweets 0
+    .like_button{id: "like_button_#{@tweet.id}"}
+      = render "likes/like", {tweet: @tweet}
     = fa_icon "envelope"
     .guide-message メッセージ
   .detail__timeline__tweetbox__one

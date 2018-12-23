@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
   has_many :tweets
   has_many :comments
+  has_many :likes, through: :tweets
   has_many :images, through: :tweets
 
   def self.new_username
